@@ -1,0 +1,17 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.button-click-effect:active {
+  transform: scale(0.9);
+}
+
+.button-click-effect:focus {
+  outline: none;
+}
+
+#portfolio,
+#about,
+#contact {
+  scroll-margin-top: 15vh;
+}
