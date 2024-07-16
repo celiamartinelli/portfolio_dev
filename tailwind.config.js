@@ -3,7 +3,11 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      // dedans tu écriras tes couleurs, tailles, polices, etc.
+      colors: {
+        bgFirstgradient: '#aef1d7',
+        bgSecondGradient: '#def1f6',
+        bgThirdGradient: '#7cd4e6',
+      },
     },
   },
   plugins: [],

@@ -1,4 +1,3 @@
-import './Vanta.scss';
 import { useState, useEffect, useRef } from 'react';
 // import CLOUDS from 'vanta/dist/vanta.clouds.min';
 import FOG from 'vanta/dist/vanta.fog.min';

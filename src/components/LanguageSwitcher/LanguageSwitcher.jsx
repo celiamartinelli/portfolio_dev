@@ -12,18 +12,20 @@ export default function LanguageSwitcher() {
   };
 
   return (
-    <div className="flex items-center">
-      <button type="button" onClick={toggleLanguage}>
-        <img
-          className="size-5"
-          src={
-            language === 'en'
-              ? '/assets/united-kingdom.png'
-              : '/assets/france.png'
-          }
-          alt={language === 'en' ? 'English' : 'Français'}
-        />
-      </button>
-    </div>
+    <button
+      className="hover:transition ease-in duration-15 transform hover:scale-95 focus:outline-none"
+      type="button"
+      onClick={toggleLanguage}
+    >
+      <img
+        className="size-5"
+        src={
+          language === 'en'
+            ? '/assets/united-kingdom.png'
+            : '/assets/france.png'
+        }
+        alt={language === 'en' ? 'English' : 'Français'}
+      />
+    </button>
   );
 }

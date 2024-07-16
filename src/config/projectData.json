@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "path": "1",
+      "title": "Nom du projet 1",
+      "gif": "chemin/vers/gif1.gif",
+      "description": "Description du projet 1",
+      "technologies": ["Technologie 1", "Technologie 2", "Technologie 3"],
+      "github": "lien-vers-repo-github-1",
+      "demo": "lien-vers-demo-1"
+    },
+    {
+      "id": 2,
+      "path": "projet-2",
+      "title": "Nom du projet 2",
+      "gif": "chemin/vers/gif2.gif",
+      "description": "Description du projet 2",
+      "technologies": ["Technologie 4", "Technologie 5", "Technologie 6"],
+      "github": "lien-vers-repo-github-2",
+      "demo": "lien-vers-demo-2"
+    },
+    {
+      "id": 3,
+      "path": "projet-3",
+      "title": "Nom du projet 3",
+      "gif": "chemin/vers/gif3.gif",
+      "description": "Description du projet 3",
+      "technologies": ["Technologie 7", "Technologie 8", "Technologie 9"],
+      "github": "lien-vers-repo-github-3",
+      "demo": "lien-vers-demo-3"
+    }
+  ]
+}

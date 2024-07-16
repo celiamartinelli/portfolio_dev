@@ -1,14 +1,17 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { FiSun, FiMoon } from 'react-icons/fi';
 
-import './Header.scss';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 export default function Header() {
   const [activeLink, setActiveLink] = useState('a');
   const [isScrolled, setIsScrolled] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
+  const [textColor, setTextColor] = useState('black');
 
   useEffect(() => {
     const handleScroll = () => {
-      // Observer pour détecter si la barre de navigation est visible
       const observer = new IntersectionObserver(
         ([entry]) => {
           setIsScrolled(entry.isIntersecting);
@@ -16,11 +19,9 @@ export default function Header() {
         { threshold: [1] }
       );
 
-      // Parcours de tous les liens de la barre de navigation pour observer chaque lien
       const navLinks = document.querySelectorAll('a');
       navLinks.forEach((link) => observer.observe(link));
 
-      // Parcours de toutes les sections pour détecter quelle section est visible
       const sections = document.querySelectorAll('div[id]');
       sections.forEach((section) => {
         const top = section.offsetTop;
@@ -31,15 +32,17 @@ export default function Header() {
       });
     };
 
-    // Écouteur d'événements pour le défilement de la fenêtre
     window.addEventListener('scroll', handleScroll);
 
-    // Nettoyage des écouteurs d'événements lors du démontage du composant
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    setTextColor(darkMode ? 'white' : 'black');
+  }, [darkMode]);
+
   return (
-    <div className="relative">
+    <div className="relative" style={{ color: textColor }}>
       <button
         className="fixed z-10 p-4 text-xl rounded-full"
         type="button"
@@ -48,7 +51,9 @@ export default function Header() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
       >
-        <img src="/CM.png" alt="Logo" className="w-12 h-12 rounded-full" />
+        <Link to="/">
+          <img src="/CM.png" alt="Logo" className="w-12 h-12 rounded-full" />
+        </Link>
       </button>
 
       <nav
@@ -93,6 +98,16 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+      <div className="text-2xl p-2 flex flex-row-reverse right-6 top-5 fixed z-20 ">
+        <LanguageSwitcher />
+        <button
+          className="mx-2"
+          type="button"
+          onClick={() => setDarkMode(!darkMode)}
+        >
+          {darkMode ? <FiSun /> : <FiMoon />}
+        </button>
+      </div>
     </div>
   );
 }

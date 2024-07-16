@@ -1,4 +1,3 @@
-import './Form.scss';
 import { useState } from 'react';
 
 export default function Form() {
@@ -9,7 +8,7 @@ export default function Form() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // Traitez les données du formulaire ici
+
     console.log({ name, reason, description, email });
   };
 
