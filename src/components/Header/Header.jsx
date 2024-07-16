@@ -64,37 +64,37 @@ export default function Header() {
         {' '}
         <ul className="flex justify-around ">
           <li>
-            <a
-              href="#portfolio"
+            <Link
+              to="/#portfolio"
               onClick={() => setActiveLink('home')}
               className={`p-2 rounded-full ${
                 activeLink === 'portfolio' ? 'bg-white  bg-opacity-50' : ''
               }`}
             >
               Portfolio
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#about"
+            <Link
+              to="/#about"
               onClick={() => setActiveLink('about')}
               className={`p-2 rounded-full ${
                 activeLink === 'about' ? 'bg-white bg-opacity-50' : ''
               }`}
             >
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="#contact"
+            <Link
+              to="/#contact"
               onClick={() => setActiveLink('contact')}
               className={`p-2 rounded-full ${
                 activeLink === 'contact' ? 'bg-white bg-opacity-50' : ''
               }`}
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

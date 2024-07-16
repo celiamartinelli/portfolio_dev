@@ -3,7 +3,7 @@ import FOG from 'vanta/dist/vanta.fog.min';
 import { useTranslation } from 'react-i18next';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FaGithub } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import DarkModeContext from '../../../styles/DarkModeContext';
 import './HomePage.scss';
 import Form from '../../Form/Form';
@@ -21,6 +21,20 @@ export default function HomePage() {
     loop: 3,
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
   });
+
+  const location = useLocation();
+
+  useEffect(() => {
+    // Extraire l'identifiant de l'ancre depuis l'URL
+    const anchorId = location.hash.replace('#', '');
+    if (anchorId) {
+      const element = document.getElementById(anchorId);
+      if (element) {
+        // Scroller vers l'élément
+        element.scrollIntoView();
+      }
+    }
+  }, [location]);
 
   const { projects } = projectData;
   // console.log(projects);
