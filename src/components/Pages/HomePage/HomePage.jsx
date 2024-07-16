@@ -37,7 +37,27 @@ export default function HomePage() {
   }, [location]);
 
   const { projects } = projectData;
-  // console.log(projects);
+
+  const technologies = [
+    'React',
+    'Node.js',
+    'JavaScript',
+    'HTML',
+    'CSS',
+    'React Native',
+    'Supabase',
+    'Expo',
+    'TailwindCSS',
+  ];
+  const softSkills = [
+    "Capacité d'adaptation",
+    'Motivation',
+    'Gestion du Temps',
+    'Autodiscipline',
+    'Résolution de prioblème',
+    'Curiosité',
+    'Sens de la communication',
+  ];
 
   useEffect(() => {
     if (myRef.current) {
@@ -135,18 +155,21 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h2 className="text-center font-bold">Projets</h2>
-                  <p>voici quelques projets</p>
+                  <p className="text-center">voici quelques projets</p>
                   <div className="flex justify-center">
-                    <ul className="flex flex-row">
+                    <ul className="flex flex-row flex-wrap">
                       {projects.map((project) => (
-                        <li key={project.id} className="text-center">
+                        <li
+                          key={project.id}
+                          className="w-32 h-32 border border-black rounded-md text-center shadow-md m-2 p-2 bg-azur"
+                        >
                           <Link
                             to={`/project/${project.id}`}
                             data-id={project.id}
                           >
                             {project.title}
                           </Link>
-                          <p>{project.description}</p>
+                          <p>{project.titleDescription}</p>
                         </li>
                       ))}
                     </ul>
@@ -171,59 +194,27 @@ export default function HomePage() {
                 <div>
                   <h2 className="text-center font-bold">HardSkill</h2>
                   <ul className="flex flex-wrap justify-center">
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      React
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      Node.js
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      JavaScript
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      HTML
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      CSS
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      React Native
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      Supabase
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      Expo
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-500 text-white m-1">
-                      TaildwindCSS
-                    </li>
+                    {technologies.map((tech) => (
+                      <li
+                        key={tech}
+                        className="mr-2 py-1 px-2 rounded bg-emerald-500 text-white m-1"
+                      >
+                        {tech}
+                      </li>
+                    ))}
                   </ul>
                 </div>
                 <div>
                   <h2 className="text-center font-bold">SofSkill</h2>
                   <ul className="flex flex-wrap justify-center">
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1">
-                      Capacité d'adaptation
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1">
-                      Motivation
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1">
-                      Gestion du Temps
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1">
-                      Autodiscipline
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1">
-                      Résolution de prioblème
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1">
-                      Curiosité
-                    </li>
-                    <li className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1">
-                      Sens de la communication
-                    </li>
+                    {softSkills.map((tech) => (
+                      <li
+                        key={tech}
+                        className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1"
+                      >
+                        {tech}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -236,7 +227,14 @@ export default function HomePage() {
                     Contactez-moi
                   </h2>
                   <p className="text-center">
-                    Vous pouvez m'envoyer un email à monadresseemail@example.com
+                    Vous pouvez m'envoyer un email à l'adresse suivante : <br />
+                    <a
+                      href="mailto:celia.martinelli2@gmail.com"
+                      className="text-emerald-500"
+                    >
+                      celiamartinelli2@gmail.com
+                    </a>{' '}
+                    <br />
                     ou me suivre sur les réseaux sociaux. J'aimerais avoir de
                     vos nouvelles et discuter de la façon dont nous pourrions
                     travailler ensemble pour créer quelque chose de grand.

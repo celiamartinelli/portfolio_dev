@@ -19,9 +19,11 @@ export default function ProjectPage() {
           <h1>{project.title}</h1>
           <p>{project.description}</p>
           <h2>Technologies utilisées</h2>
-          <ul>
+          <ul className="flex">
             {project.technologies.map((tech) => (
-              <li key={tech}>{tech}</li>
+              <li key={tech} className=" bg-emerald-500 rounded-md p-2 m-2">
+                {tech}
+              </li>
             ))}
           </ul>
           <h2>Captures d'écran</h2>

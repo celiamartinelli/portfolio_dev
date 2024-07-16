@@ -7,6 +7,7 @@ export default {
         bgFirstgradient: '#aef1d7',
         bgSecondGradient: '#def1f6',
         bgThirdGradient: '#7cd4e6',
+        azur: '#89f4f2',
       },
     },
   },

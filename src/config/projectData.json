@@ -2,18 +2,19 @@
   "projects": [
     {
       "id": 1,
-      "path": "1",
-      "title": "Nom du projet 1",
+      "title": "Textile Guide",
       "gif": "chemin/vers/gif1.gif",
-      "description": "Description du projet 1",
-      "technologies": ["Technologie 1", "Technologie 2", "Technologie 3"],
-      "github": "lien-vers-repo-github-1",
+      "titleDescription": "Application web de guide des tissus",
+      "description": "Textile-Guide est une application web développée avec React, utilisant Tailwind CSS pour le style et TypeScript pour une programmation robuste et typée. L'application permet aux utilisateurs de voir quels tissus correspondent à quels projets de couture (pantalon, t-shirt, sweat-shirt) et vice versa, quels projets correspondent à quels tissus.",
+      "technologies": ["React", "Tailwind CSS", "TypeScript "],
+      "github": "https://github.com/celiamartinelli/Textile_Guide_React",
       "demo": "lien-vers-demo-1"
     },
     {
       "id": 2,
-      "path": "projet-2",
-      "title": "Nom du projet 2",
+
+      "title": "Textile Guide srv",
+      "titleDescription": "API de Textile",
       "gif": "chemin/vers/gif2.gif",
       "description": "Description du projet 2",
       "technologies": ["Technologie 4", "Technologie 5", "Technologie 6"],
@@ -22,8 +23,9 @@
     },
     {
       "id": 3,
-      "path": "projet-3",
-      "title": "Nom du projet 3",
+
+      "title": "Coloc&Co",
+      "titleDescription": "Application de gestion de colocation",
       "gif": "chemin/vers/gif3.gif",
       "description": "Description du projet 3",
       "technologies": ["Technologie 7", "Technologie 8", "Technologie 9"],
