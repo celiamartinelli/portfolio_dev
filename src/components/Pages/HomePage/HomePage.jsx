@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import { FaGithub } from 'react-icons/fa';
 import Header from '../../Header/Header';
@@ -5,6 +6,7 @@ import './HomePage.scss';
 import Form from '../../Form/Form';
 
 export default function HomePage() {
+  const { t } = useTranslation();
   const [text] = useTypewriter({
     words: ['passionnée', 'curieuse', 'touche à tout', 'développeuse web'],
     loop: 3,
@@ -18,7 +20,7 @@ export default function HomePage() {
 
         <div className="overflow-hidden">
           <div className="text-lg mt-40 text-center m-5">
-            <h1>Hi, I'm Célia Martinelli, Nice to meet you</h1>
+            <h1>{t('home.title')}</h1>
             <div>
               <h1 className="text-4xl">
                 Je suis <span>{text}</span>

@@ -7,6 +7,7 @@ import './App.scss';
 import NotFoundPage from '../Pages/NotFound/NotFound';
 
 import HomePage from '../Pages/HomePage/HomePage';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(false);
@@ -66,6 +67,7 @@ export default function App() {
           >
             {darkMode ? <FiSun /> : <FiMoon />}
           </button>
+          <LanguageSwitcher />
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="*" element={<NotFoundPage />} />
