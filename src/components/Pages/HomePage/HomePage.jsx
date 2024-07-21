@@ -161,15 +161,21 @@ export default function HomePage() {
                       {projects.map((project) => (
                         <li
                           key={project.id}
-                          className="w-32 h-32 border border-black rounded-md text-center shadow-md m-2 p-2 bg-azur"
+                          className="w-36 h-36 border border-black rounded-md text-center shadow-md m-2 p-2 bg-azur"
                         >
                           <Link
                             to={`/project/${project.id}`}
                             data-id={project.id}
                           >
-                            {project.title}
+                            <h3 className="text-xl">{project.title}</h3>
+                            <img
+                              src={project.img}
+                              alt={project.title}
+                              className="w-20 h-20 mx-auto"
+                            />
+
+                            <p>{project.titleDescription}</p>
                           </Link>
-                          <p>{project.titleDescription}</p>
                         </li>
                       ))}
                     </ul>

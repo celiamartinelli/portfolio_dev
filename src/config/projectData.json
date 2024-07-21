@@ -3,6 +3,7 @@
     {
       "id": 1,
       "title": "Textile Guide",
+      "img": "../../public/assets/project/textile_guide.png",
       "gif": "chemin/vers/gif1.gif",
       "titleDescription": "Application web de guide des tissus",
       "description": "Textile-Guide est une application web développée avec React, utilisant Tailwind CSS pour le style et TypeScript pour une programmation robuste et typée. L'application permet aux utilisateurs de voir quels tissus correspondent à quels projets de couture (pantalon, t-shirt, sweat-shirt) et vice versa, quels projets correspondent à quels tissus.",
@@ -12,8 +13,8 @@
     },
     {
       "id": 2,
-
       "title": "Textile Guide srv",
+      "img": "../../public/assets/project/GT.png",
       "titleDescription": "API de Textile",
       "gif": "chemin/vers/gif2.gif",
       "description": "Description du projet 2",
@@ -23,8 +24,8 @@
     },
     {
       "id": 3,
-
       "title": "Coloc&Co",
+      "img": "../../public/assets/project/coloc&co.png",
       "titleDescription": "Application de gestion de colocation",
       "gif": "chemin/vers/gif3.gif",
       "description": "Description du projet 3",
