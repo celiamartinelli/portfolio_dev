@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useMemo } from 'react';
 import FOG from 'vanta/dist/vanta.fog.min';
 import { useTranslation } from 'react-i18next';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { Link, useLocation } from 'react-router-dom';
 import DarkModeContext from '../../../styles/DarkModeContext';
 import './HomePage.scss';
@@ -146,13 +146,18 @@ export default function HomePage() {
                   expérience dans divers domaines du développement web.
                 </p>
                 <div className="flex items-center justify-center">
-                  <a
-                    className="flex flex-col items-center justify-center text-center bg-lightMint text-white py-2 px-4 rounded shadow transition ease-in duration-25 transform hover:scale-95 focus:outline-none"
-                    href="https://github.com/celiamartinelli?tab=overview&from=2024-04-01&to=2024-04-30"
+                  <Link
+                    className="flex flex-col items-center justify-center text-center bg-lightMint text-white py-2 px-4 rounded shadow transition ease-in duration-25 transform hover:scale-95 focus:outline-none mx-2"
+                    to="https://github.com/celiamartinelli?tab=overview&from=2024-04-01&to=2024-04-30"
                   >
                     <FaGithub className="text-5xl" />
-                    Voir mon travail sur GitHub
-                  </a>
+                  </Link>
+                  <Link
+                    className="flex flex-col items-center justify-center text-center bg-lightMint text-white py-2 px-4 rounded shadow transition ease-in duration-25 transform hover:scale-95 focus:outline-none mx-2"
+                    to="https://www.linkedin.com/in/celiamartinelli/"
+                  >
+                    <FaLinkedinIn className="text-5xl" />
+                  </Link>
                 </div>
                 <div>
                   <h2 className="text-center font-bold">Projets</h2>
