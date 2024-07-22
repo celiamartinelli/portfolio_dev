@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
-import projectData from '../../../config/projectData.json';
+import projectData from '../../../config/projectDataFR.json';
 import Footer from '../../Footer/Footer';
 
 export default function ProjectPage() {

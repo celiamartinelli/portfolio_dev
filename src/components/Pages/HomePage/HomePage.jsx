@@ -7,7 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import DarkModeContext from '../../../styles/DarkModeContext';
 import './HomePage.scss';
 import Form from '../../Form/Form';
-import projectData from '../../../config/projectData.json';
+import projectDataFR from '../../../config/projectDataFR.json';
 import Footer from '../../Footer/Footer';
 
 export default function HomePage() {
@@ -37,7 +37,10 @@ export default function HomePage() {
     }
   }, [location]);
 
-  const { projects } = projectData;
+  const projects = projectDataFR.projects.map((project) => {
+    const key = Object.keys(project)[0]; // Obtient la clé du projet
+    return project[key]; // Retourne le contenu du projet
+  });
 
   const technologies = [
     'React',
@@ -118,14 +121,11 @@ export default function HomePage() {
                 <h1>{t('home.title')}</h1>
                 <div>
                   <h1 className="text-4xl">
-                    Je suis <span>{text}</span>
+                    {t('home.iam')} <span>{text}</span>
                     <Cursor cursorColor="green" />
                   </h1>
                 </div>
-                <p className="text-m">
-                  Je m'efforce de créer des expériences numériques uniques et
-                  engageantes
-                </p>
+                <p className="text-m">{t('home.com')}</p>
               </div>
             </div>
 
@@ -135,16 +135,9 @@ export default function HomePage() {
                 className=" bg-white bg-opacity-30 rounded-2xl p-7 m-5"
               >
                 <h2 className="text-2xl font-bold text-center">
-                  Bienvenue sur mon portfolio
+                  {t('portfolio.title')}
                 </h2>
-                <p className="text-center">
-                  Je suis développeuse web passionné par la création de
-                  solutions logicielles efficaces et innovantes. J'ai une solide
-                  expérience en JavaScript, React, Node.js, React Native et
-                  d'autres technologies de développement web. J'ai travaillé sur
-                  de nombreux projets passionnants et j'ai acquis une solide
-                  expérience dans divers domaines du développement web.
-                </p>
+                <p className="text-center">{t('portfolio.paraph')}</p>
                 <div className="flex items-center justify-center">
                   <Link
                     className="flex flex-col items-center justify-center text-center bg-lightMint text-white py-2 px-4 rounded shadow transition ease-in duration-25 transform hover:scale-95 focus:outline-none mx-2"
@@ -160,30 +153,47 @@ export default function HomePage() {
                   </Link>
                 </div>
                 <div>
-                  <h2 className="text-center font-bold">Projets</h2>
-                  <p className="text-center">voici quelques projets</p>
+                  <h2 className="text-center font-bold">
+                    {t('portfolio.title2')}
+                  </h2>
+                  <p className="text-center"> {t('portfolio.p2')}</p>
                   <div className="flex justify-center ">
                     <ul className="flex flex-row flex-wrap">
-                      {projects.map((project) => (
-                        <li
-                          key={project.id}
-                          className="w-full border border-blue rounded-md text-center shadow-md m-2 p-2 bg-lightBlue"
-                        >
-                          <Link
-                            to={`/project/${project.id}`}
-                            data-id={project.id}
-                          >
-                            <h3 className="text-xl">{project.title}</h3>
-                            <img
-                              src={project.img}
-                              alt={project.title}
-                              className="w-20 h-20 mx-auto"
-                            />
+                      {Array.isArray(projects) && projects.length > 0 ? (
+                        projects.map((project) => {
+                          const projectTranslation = t(
+                            `projects.project${project.id}`,
+                            { returnObjects: true }
+                          );
 
-                            <p>{project.titleDescription}</p>
-                          </Link>
-                        </li>
-                      ))}
+                          return (
+                            <li
+                              key={project.id}
+                              className="w-full border border-blue rounded-md text-center shadow-md m-2 p-2 bg-lightBlue"
+                            >
+                              <Link
+                                to={`/project/${project.id}`}
+                                data-id={project.id}
+                              >
+                                <h3 className="text-xl">
+                                  {projectTranslation.title || project.title}
+                                </h3>
+                                <img
+                                  src={project.img}
+                                  alt={project.title}
+                                  className="w-20 h-20 mx-auto"
+                                />
+                                <p>
+                                  {projectTranslation.titleDescription ||
+                                    project.titleDescription}
+                                </p>
+                              </Link>
+                            </li>
+                          );
+                        })
+                      ) : (
+                        <p>No projects available.</p>
+                      )}
                     </ul>
                   </div>
                 </div>

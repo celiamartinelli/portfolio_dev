@@ -1,0 +1,54 @@
+{
+  "projects": [
+    {
+      "project1": {
+        "id": 1,
+        "title": "Textile Guide",
+        "img": "../../public/assets/project/textile_guide.png",
+        "gif": "../../public/assets/project/gif/giphy.gif",
+        "titleDescription": "Web application for fabric guide",
+        "description": "Textile-Guide is a web application developed with React, using Tailwind CSS for styling and TypeScript for robust, typed programming. The application allows users to see which fabrics match which sewing projects (pants, t-shirt, sweatshirt) and vice versa, which projects match which fabrics.",
+        "technologies": ["React", "Tailwind CSS", "TypeScript", "Expo"],
+        "github": "https://github.com/celiamartinelli/Textile_Guide_React",
+        "demo": "https://textile-guide.netlify.app/"
+      }
+    },
+    {
+      "project2": {
+        "id": 2,
+        "title": "Textile Guide srv",
+        "img": "../../public/assets/project/GT.png",
+        "titleDescription": "Textile API",
+        "gif": "../../public/assets/project/gif/giphy.gif",
+        "description": "Project 2 description",
+        "technologies": ["Strapi"],
+        "github": "https://github.com/celiamartinelli/textile-guide-srv",
+        "demo": "link-to-demo-2"
+      }
+    },
+    {
+      "project3": {
+        "id": 3,
+        "title": "Coloc&Co",
+        "img": "../../public/assets/project/coloc&co.png",
+        "titleDescription": "Roommate management application",
+        "gif": "../../public/assets/project/gif/giphy.gif",
+        "description": "Coloc&co is an application designed to simplify daily management and communication within a shared living arrangement.",
+        "technologies": [
+          "React",
+          "Css",
+          "Sass",
+          "Html",
+          "Redux",
+          "Multer",
+          "ExpressJs",
+          "PostgreSQL",
+          "Bcrypt",
+          "JsonWebToken"
+        ],
+        "github": "https://github.com/celiamartinelli/colocandcoFront",
+        "demo": "link-to-demo-3"
+      }
+    }
+  ]
+}
