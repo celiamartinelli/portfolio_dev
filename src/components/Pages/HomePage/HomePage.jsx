@@ -8,6 +8,7 @@ import DarkModeContext from '../../../styles/DarkModeContext';
 import './HomePage.scss';
 import Form from '../../Form/Form';
 import projectData from '../../../config/projectData.json';
+import Footer from '../../Footer/Footer';
 
 export default function HomePage() {
   const [vantaEffect, setVantaEffect] = useState(null);
@@ -131,7 +132,7 @@ export default function HomePage() {
             <div>
               <div
                 id="portfolio"
-                className=" bg-white bg-opacity-50 rounded-2xl p-7 m-5"
+                className=" bg-white bg-opacity-30 rounded-2xl p-7 m-5"
               >
                 <h2 className="text-2xl font-bold text-center">
                   Bienvenue sur mon portfolio
@@ -146,7 +147,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex items-center justify-center">
                   <a
-                    className="flex flex-col items-center justify-center text-center bg-emerald-500 text-white py-2 px-4 rounded shadow transition ease-in duration-25 transform hover:scale-95 focus:outline-none"
+                    className="flex flex-col items-center justify-center text-center bg-lightMint text-white py-2 px-4 rounded shadow transition ease-in duration-25 transform hover:scale-95 focus:outline-none"
                     href="https://github.com/celiamartinelli?tab=overview&from=2024-04-01&to=2024-04-30"
                   >
                     <FaGithub className="text-5xl" />
@@ -156,12 +157,12 @@ export default function HomePage() {
                 <div>
                   <h2 className="text-center font-bold">Projets</h2>
                   <p className="text-center">voici quelques projets</p>
-                  <div className="flex justify-center">
+                  <div className="flex justify-center ">
                     <ul className="flex flex-row flex-wrap">
                       {projects.map((project) => (
                         <li
                           key={project.id}
-                          className="w-36 h-36 border border-black rounded-md text-center shadow-md m-2 p-2 bg-azur"
+                          className="w-full border border-blue rounded-md text-center shadow-md m-2 p-2 bg-lightBlue"
                         >
                           <Link
                             to={`/project/${project.id}`}
@@ -203,7 +204,7 @@ export default function HomePage() {
                     {technologies.map((tech) => (
                       <li
                         key={tech}
-                        className="mr-2 py-1 px-2 rounded bg-emerald-500 text-white m-1"
+                        className="mr-2 py-1 px-2 rounded bg-lightMint m-1"
                       >
                         {tech}
                       </li>
@@ -216,7 +217,7 @@ export default function HomePage() {
                     {softSkills.map((tech) => (
                       <li
                         key={tech}
-                        className="mr-2 py-1 px-2 rounded  bg-emerald-800 text-white m-1"
+                        className="mr-2 py-1 px-2 rounded  bg-emerald-800  m-1"
                       >
                         {tech}
                       </li>
@@ -252,6 +253,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+          <Footer />
         </DarkModeContext.Provider>
       </div>
     </div>

@@ -82,7 +82,7 @@ export default function Header() {
                 activeLink === 'about' ? 'bg-white bg-opacity-50' : ''
               }`}
             >
-              About
+              A Propos
             </Link>
           </li>
           <li>

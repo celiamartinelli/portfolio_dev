@@ -15,7 +15,7 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col rounded-lg p-4 bg-emerald-600 w-80 h-150"
+      className="flex flex-col rounded-lg p-4 bg-lightMint w-80 h-150"
     >
       <label htmlFor="name" className="mb-2 text-white">
         Nom:

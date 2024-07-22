@@ -4,22 +4,22 @@
       "id": 1,
       "title": "Textile Guide",
       "img": "../../public/assets/project/textile_guide.png",
-      "gif": "chemin/vers/gif1.gif",
+      "gif": "../../public/assets/project/gif/giphy.gif",
       "titleDescription": "Application web de guide des tissus",
       "description": "Textile-Guide est une application web développée avec React, utilisant Tailwind CSS pour le style et TypeScript pour une programmation robuste et typée. L'application permet aux utilisateurs de voir quels tissus correspondent à quels projets de couture (pantalon, t-shirt, sweat-shirt) et vice versa, quels projets correspondent à quels tissus.",
-      "technologies": ["React", "Tailwind CSS", "TypeScript "],
+      "technologies": ["React", "Tailwind CSS", "TypeScript", "Expo"],
       "github": "https://github.com/celiamartinelli/Textile_Guide_React",
-      "demo": "lien-vers-demo-1"
+      "demo": "https://textile-guide.netlify.app/"
     },
     {
       "id": 2,
       "title": "Textile Guide srv",
       "img": "../../public/assets/project/GT.png",
       "titleDescription": "API de Textile",
-      "gif": "chemin/vers/gif2.gif",
+      "gif": "../../public/assets/project/gif/giphy.gif",
       "description": "Description du projet 2",
-      "technologies": ["Technologie 4", "Technologie 5", "Technologie 6"],
-      "github": "lien-vers-repo-github-2",
+      "technologies": ["Strapi"],
+      "github": "https://github.com/celiamartinelli/textile-guide-srv",
       "demo": "lien-vers-demo-2"
     },
     {
@@ -27,10 +27,21 @@
       "title": "Coloc&Co",
       "img": "../../public/assets/project/coloc&co.png",
       "titleDescription": "Application de gestion de colocation",
-      "gif": "chemin/vers/gif3.gif",
-      "description": "Description du projet 3",
-      "technologies": ["Technologie 7", "Technologie 8", "Technologie 9"],
-      "github": "lien-vers-repo-github-3",
+      "gif": "../../public/assets/project/gif/giphy.gif",
+      "description": "Coloc&co est une application conçue pour simplifier la gestion quotidienne et la communication au sein d'une colocation.",
+      "technologies": [
+        "React",
+        "Css",
+        "Sass",
+        "Html",
+        "Redux",
+        "Multer",
+        "ExpressJs",
+        "PostgreSQL",
+        "Bcrypt",
+        "JsonWebToken"
+      ],
+      "github": "https://github.com/celiamartinelli/colocandcoFront",
       "demo": "lien-vers-demo-3"
     }
   ]

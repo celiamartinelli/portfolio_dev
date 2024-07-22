@@ -1,5 +1,7 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { FaGithub } from 'react-icons/fa';
 import projectData from '../../../config/projectData.json';
+import Footer from '../../Footer/Footer';
 
 export default function ProjectPage() {
   //   const { t } = useTranslation();
@@ -13,31 +15,50 @@ export default function ProjectPage() {
   }
 
   return (
-    <div className="relative w-screen h-screen">
-      <div className="animation display flex flex-col justify-center min-h-screen">
-        <div>
-          <h1>{project.title}</h1>
-          <p>{project.description}</p>
-          <h2>Technologies utilisées</h2>
-          <ul className="flex">
-            {project.technologies.map((tech) => (
-              <li key={tech} className=" bg-emerald-500 rounded-md p-2 m-2">
-                {tech}
-              </li>
-            ))}
-          </ul>
-          <h2>Captures d'écran</h2>
-          <div>
-            {/* <img
+    <div className="w-screen h-screen bg-cover bg-custom-bg">
+      <div className="flex flex-col justify-center min-h-screen">
+        <div className="bg-white bg-opacity-50 rounded-2xl p-7 w-10/12 flex flex-col justify-center items-center mx-auto mt-20 shadow-xl mb-10">
+          <h1 className="text-3xl">{project.title}</h1>
+          <p className="text-justify m-4">{project.description}</p>
+
+          <div className="mb-4">
+            <img
+              className="rounded-lg shadow-md"
               src={project.gif}
               alt={`Capture d'écran de ${project.title}`}
-            /> */}
+            />
           </div>
-          <h2>Lien vers le projet</h2>
-          <a href={project.demo}>Voir le projet</a>
-          <h2>Lien vers le code source</h2>
-          <a href={project.github}>Voir le code source</a>
+          <div className="flex justify-center items-center">
+            <Link
+              to={project.demo}
+              className=" bg-lightBlue p-4 rounded-lg shadow-md mx-2"
+            >
+              Visiter le site {project.title}
+            </Link>
+
+            <Link
+              className=" bg-lightBlue p-4 rounded-lg shadow-md mx-2 flex items-center"
+              to={project.github}
+            >
+              <FaGithub className="text-2xl mr-2" />
+              Voir le code source
+            </Link>
+          </div>
+          <div className="mt-4 flex flex-col justify-center items-center">
+            <h2>Technologies utilisées</h2>
+            <ul className="flex flex-wrap">
+              {project.technologies.map((tech) => (
+                <li
+                  key={tech}
+                  className=" bg-lightMint rounded-md p-1 px-2 m-1 mx-2 shadow-md"
+                >
+                  {tech}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+        <Footer />
       </div>
     </div>
   );

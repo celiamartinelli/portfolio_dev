@@ -10,6 +10,7 @@ import HomePage from '../Pages/HomePage/HomePage';
 
 import ProjectPage from '../Pages/ProjectPage/ProjectPage';
 import Header from '../Header/Header';
+
 // import { useTheme } from '../ThemeContext/ThemeContext';
 
 export default function App() {
