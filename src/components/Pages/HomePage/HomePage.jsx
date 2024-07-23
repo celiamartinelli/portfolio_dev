@@ -7,7 +7,7 @@ import { Link, useLocation } from 'react-router-dom';
 import DarkModeContext from '../../../styles/DarkModeContext';
 import './HomePage.scss';
 import Form from '../../Form/Form';
-import projectDataFR from '../../../config/projectDataFR.json';
+// import projectDataFR from '../../../config/projectDataFR.json';
 import Footer from '../../Footer/Footer';
 
 export default function HomePage() {
@@ -37,10 +37,12 @@ export default function HomePage() {
     }
   }, [location]);
 
-  const projects = projectDataFR.projects.map((project) => {
-    const key = Object.keys(project)[0]; // Obtient la clé du projet
-    return project[key]; // Retourne le contenu du projet
-  });
+  const projects = useMemo(() => {
+    const keys = Object.keys(t('portfolio', { returnObjects: true }));
+    return keys
+      .filter((key) => key.startsWith('project'))
+      .map((key) => t(`portfolio.${key}`, { returnObjects: true }));
+  }, [t]);
 
   const technologies = [
     'React',
@@ -140,12 +142,16 @@ export default function HomePage() {
                 <p className="text-center">{t('portfolio.paraph')}</p>
                 <div className="flex items-center justify-center">
                   <Link
+                    rel="noopener noreferrer"
+                    target="_blank"
                     className="flex flex-col items-center justify-center text-center bg-lightMint text-white py-2 px-4 rounded shadow transition ease-in duration-25 transform hover:scale-95 focus:outline-none mx-2"
                     to="https://github.com/celiamartinelli?tab=overview&from=2024-04-01&to=2024-04-30"
                   >
                     <FaGithub className="text-5xl" />
                   </Link>
                   <Link
+                    rel="noopener noreferrer"
+                    target="_blank"
                     className="flex flex-col items-center justify-center text-center bg-lightMint text-white py-2 px-4 rounded shadow transition ease-in duration-25 transform hover:scale-95 focus:outline-none mx-2"
                     to="https://www.linkedin.com/in/celiamartinelli/"
                   >
@@ -159,41 +165,29 @@ export default function HomePage() {
                   <p className="text-center"> {t('portfolio.p2')}</p>
                   <div className="flex justify-center ">
                     <ul className="flex flex-row flex-wrap">
-                      {Array.isArray(projects) && projects.length > 0 ? (
-                        projects.map((project) => {
-                          const projectTranslation = t(
-                            `projects.project${project.id}`,
-                            { returnObjects: true }
-                          );
+                      {projects.map((project) => (
+                        <div
+                          key={project.id}
+                          className="m-4 p-4 bg-gray-100 rounded-lg shadow-lg w-72"
+                        >
+                          <Link
+                            to={`/project/${project.id}`}
+                            className="text-blue-500 hover:underline mt-2 block"
+                            data-id={project.id}
+                          >
+                            <h3 className="text-xl font-semibold">
+                              {project.title}
+                            </h3>
 
-                          return (
-                            <li
-                              key={project.id}
-                              className="w-full border border-blue rounded-md text-center shadow-md m-2 p-2 bg-lightBlue"
-                            >
-                              <Link
-                                to={`/project/${project.id}`}
-                                data-id={project.id}
-                              >
-                                <h3 className="text-xl">
-                                  {projectTranslation.title || project.title}
-                                </h3>
-                                <img
-                                  src={project.img}
-                                  alt={project.title}
-                                  className="w-20 h-20 mx-auto"
-                                />
-                                <p>
-                                  {projectTranslation.titleDescription ||
-                                    project.titleDescription}
-                                </p>
-                              </Link>
-                            </li>
-                          );
-                        })
-                      ) : (
-                        <p>No projects available.</p>
-                      )}
+                            <img
+                              src={project.img}
+                              alt={project.title}
+                              className="w-20 h-20 mx-auto"
+                            />
+                            <p className="mt-2">{project.description}</p>
+                          </Link>
+                        </div>
+                      ))}
                     </ul>
                   </div>
                 </div>

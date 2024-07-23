@@ -13,8 +13,8 @@ const transformProjectData = (data) => {
       title: projectInfo.title,
       description: projectInfo.description,
       technologies: Array.isArray(projectInfo.technologies)
-        ? projectInfo.technologies.join(', ')
-        : '',
+        ? projectInfo.technologies // Conservez les technologies comme tableau
+        : [],
       github: projectInfo.github,
       demo: projectInfo.demo,
       img: projectInfo.img,
@@ -46,6 +46,12 @@ const resources = {
       },
       header: {},
       footer: {},
+      projectPage: {
+        projectNotFound: 'Project not found',
+        visitSite: 'Visit the site',
+        viewCode: 'View source code',
+        technologiesUsed: 'Technologies used',
+      },
     },
   },
   fr: {
@@ -65,6 +71,12 @@ const resources = {
       },
       header: {},
       footer: {},
+      projectPage: {
+        projectNotFound: 'Projet non trouvé',
+        visitSite: 'Visiter le site',
+        viewCode: 'Voir le code source',
+        technologiesUsed: 'Technologies utilisées',
+      },
     },
   },
 };

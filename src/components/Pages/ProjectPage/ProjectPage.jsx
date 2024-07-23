@@ -1,18 +1,28 @@
 import { Link, useParams } from 'react-router-dom';
 import { FaGithub } from 'react-icons/fa';
-import projectData from '../../../config/projectDataFR.json';
+import { useTranslation } from 'react-i18next';
 import Footer from '../../Footer/Footer';
 
 export default function ProjectPage() {
-  //   const { t } = useTranslation();
+  const { t } = useTranslation();
   const { path } = useParams();
   const projectId = parseInt(path, 10);
-  console.log(path);
-  const project = projectData.projects.find((p) => p.id === projectId);
-  console.log(project);
+
+  const projectKey = `project${projectId}`;
+  const project = t(`portfolio.${projectKey}`, { returnObjects: true });
+
+  console.log('Technologies:', project.technologies);
+
   if (!project) {
-    return <div>Projet non trouvé</div>;
+    return <div>{t('portfolio.projectNotFound')}</div>;
   }
+
+  const technologies = Array.isArray(project.technologies)
+    ? project.technologies
+    : [];
+
+  console.log('Technologies:', project.technologies);
+  console.log('Is technologies an Array?', Array.isArray(project.technologies));
 
   return (
     <div className="w-screen h-screen bg-cover bg-custom-bg">
@@ -30,13 +40,17 @@ export default function ProjectPage() {
           </div>
           <div className="flex justify-center items-center">
             <Link
+              rel="noopener noreferrer"
+              target="_blank"
               to={project.demo}
               className=" bg-lightBlue p-4 rounded-lg shadow-md mx-2"
             >
-              Visiter le site {project.title}
+              {t('projectPage.visitSite')} {project.title}
             </Link>
 
             <Link
+              rel="noopener noreferrer"
+              target="_blank"
               className=" bg-lightBlue p-4 rounded-lg shadow-md mx-2 flex items-center"
               to={project.github}
             >
@@ -46,16 +60,20 @@ export default function ProjectPage() {
           </div>
           <div className="mt-4 flex flex-col justify-center items-center">
             <h2>Technologies utilisées</h2>
-            <ul className="flex flex-wrap">
-              {project.technologies.map((tech) => (
-                <li
-                  key={tech}
-                  className=" bg-lightMint rounded-md p-1 px-2 m-1 mx-2 shadow-md"
-                >
-                  {tech}
-                </li>
-              ))}
-            </ul>
+            {technologies.length > 0 ? (
+              <ul className="flex flex-wrap">
+                {technologies.map((tech) => (
+                  <li
+                    key={tech}
+                    className="bg-lightMint rounded-md p-1 px-2 m-1 mx-2 shadow-md"
+                  >
+                    {tech}
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p>Aucune technologie disponible</p>
+            )}
           </div>
         </div>
         <Footer />
