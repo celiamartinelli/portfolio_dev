@@ -52,7 +52,11 @@ export default function Header() {
         }}
       >
         <Link to="/">
-          <img src="/CM.png" alt="Logo" className="w-12 h-12 rounded-full" />
+          <img
+            src="/logoCM-vert.png"
+            alt="Logo"
+            className="w-12 h-12 rounded-full shadow-md"
+          />
         </Link>
       </button>
 

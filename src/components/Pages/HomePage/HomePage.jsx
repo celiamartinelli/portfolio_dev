@@ -168,7 +168,10 @@ export default function HomePage() {
                       {projects.map((project) => (
                         <div
                           key={project.id}
-                          className="m-4 p-4 bg-gray-100 rounded-lg shadow-lg w-72"
+                          className="m-4 p-4 rounded-lg shadow-xl w-72 transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-white
+                          
+                          
+                           hover:bg-opacity-50"
                         >
                           <Link
                             to={`/project/${project.id}`}
@@ -197,18 +200,14 @@ export default function HomePage() {
                 className=" bg-white bg-opacity-50 rounded-2xl p-7 m-5"
               >
                 <h2 className="text-2xl font-bold text-center">
-                  À propos de moi
+                  {t('about.title')}
                 </h2>
-                <p className="text-center">
-                  J'aime résoudre des problèmes complexes et créer des solutions
-                  logicielles qui ont un impact réel. Je suis toujours à la
-                  recherche de nouvelles opportunités pour apprendre et grandir
-                  en tant que développeur. Si vous êtes intéressé par mon
-                  travail ou si vous souhaitez discuter d'une opportunité
-                  potentielle, n'hésitez pas à me contacter.
-                </p>
+                <p className="text-center">{t('about.paraph')}</p>
                 <div>
-                  <h2 className="text-center font-bold">HardSkill</h2>
+                  <h2 className="text-center font-bold">
+                    {' '}
+                    {t('about.hardSkill')}
+                  </h2>
                   <ul className="flex flex-wrap justify-center">
                     {technologies.map((tech) => (
                       <li
@@ -221,7 +220,10 @@ export default function HomePage() {
                   </ul>
                 </div>
                 <div>
-                  <h2 className="text-center font-bold">SofSkill</h2>
+                  <h2 className="text-center font-bold">
+                    {' '}
+                    {t('about.softSkill')}
+                  </h2>
                   <ul className="flex flex-wrap justify-center">
                     {softSkills.map((tech) => (
                       <li
@@ -240,10 +242,10 @@ export default function HomePage() {
                   className=" bg-white bg-opacity-50 rounded-2xl p-7 m-5"
                 >
                   <h2 className="text-2xl font-bold text-center">
-                    Contactez-moi
+                    {t('contact.title')}
                   </h2>
                   <p className="text-center">
-                    Vous pouvez m'envoyer un email à l'adresse suivante : <br />
+                    {t('contact.paraphp1')} <br />
                     <a
                       href="mailto:celia.martinelli2@gmail.com"
                       className="text-emerald-500"
@@ -251,9 +253,7 @@ export default function HomePage() {
                       celiamartinelli2@gmail.com
                     </a>{' '}
                     <br />
-                    ou me suivre sur les réseaux sociaux. J'aimerais avoir de
-                    vos nouvelles et discuter de la façon dont nous pourrions
-                    travailler ensemble pour créer quelque chose de grand.
+                    {t('contact.paraphp2')}
                   </p>
                   <div className="flex justify-center">
                     <Form />
