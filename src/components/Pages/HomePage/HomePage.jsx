@@ -9,16 +9,19 @@ import './HomePage.scss';
 import Form from '../../Form/Form';
 // import projectDataFR from '../../../config/projectDataFR.json';
 import Footer from '../../Footer/Footer';
+import { useDarkMode } from '../../App/DarkModeContext';
 
 export default function HomePage() {
   const [vantaEffect, setVantaEffect] = useState(null);
-  const [darkMode, setDarkMode] = useState(false);
+  // const [darkMode, setDarkMode] = useState(false);
+  const { isDarkMode, setIsDarkMode } = useDarkMode();
   const [textColor, setTextColor] = useState('black');
   const myRef = useRef(null);
   const vantaRef = useRef(null);
   const { t } = useTranslation();
+  const words = t('portfolio.qualities', { returnObjects: true }) || [];
   const [text] = useTypewriter({
-    words: ['passionnée', 'curieuse', 'touche à tout', 'développeuse web'],
+    words: words || [],
     loop: 3,
     onLoopDone: () => console.log(`loop completed after 3 runs.`),
   });
@@ -26,12 +29,10 @@ export default function HomePage() {
   const location = useLocation();
 
   useEffect(() => {
-    // Extraire l'identifiant de l'ancre depuis l'URL
     const anchorId = location.hash.replace('#', '');
     if (anchorId) {
       const element = document.getElementById(anchorId);
       if (element) {
-        // Scroller vers l'élément
         element.scrollIntoView();
       }
     }
@@ -39,7 +40,7 @@ export default function HomePage() {
 
   const projects = useMemo(() => {
     const data = t('portfolio.projects', { returnObjects: true });
-    console.log('Projects Data:', data);
+    // console.log('Projects Data:', data);
     return Array.isArray(data) ? data : [];
   }, [t]);
 
@@ -66,10 +67,10 @@ export default function HomePage() {
         gyroControls: false,
         minHeight: 200.0,
         minWidth: 200.0,
-        highlightColor: darkMode ? 0x4859aa : 0xc4cdfc,
-        midtoneColor: darkMode ? 0x479696 : 0x96ffff,
-        lowlightColor: darkMode ? 0x157021 : 0x71ff81,
-        baseColor: darkMode ? 0x0 : undefined,
+        highlightColor: isDarkMode ? 0x4859aa : 0xc4cdfc,
+        midtoneColor: isDarkMode ? 0x479696 : 0x96ffff,
+        lowlightColor: isDarkMode ? 0x157021 : 0x71ff81,
+        baseColor: isDarkMode ? 0x0 : undefined,
         blurFactor: 0.9,
         speed: 1.3,
         zoom: 0.8,
@@ -81,33 +82,24 @@ export default function HomePage() {
         if (vantaRef.current) vantaRef.current.destroy();
       };
     }
-  }, [darkMode]);
+  }, [isDarkMode]);
   const contextValue = useMemo(
-    () => ({ darkMode, setDarkMode, textColor, setTextColor }),
-    [darkMode, textColor]
+    () => ({ isDarkMode, setIsDarkMode, textColor, setTextColor }),
+    [isDarkMode, setIsDarkMode, textColor]
   );
 
   useEffect(() => {
-    setTextColor(darkMode ? 'white' : 'black');
-  }, [darkMode]);
+    setTextColor(isDarkMode ? 'white' : 'black');
+  }, [isDarkMode]);
 
   return (
-    <div className="relative w-screen h-screen" style={{ color: textColor }}>
+    <div className="relative w-screen h-screen">
       <div
         ref={myRef}
         className="animation display flex flex-col justify-center min-h-screen"
       >
         <DarkModeContext.Provider value={contextValue}>
-          {/* <div className="text-2xl p-2 flex flex-row-reverse right-6 top-5 fixed z-20 ">
-            <button
-              className="mx-2"
-              type="button"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? <FiSun /> : <FiMoon />}
-            </button>
-          </div> */}
-          <div>
+          <div id="home">
             <div className="overflow-hidden">
               <div className="text-lg mt-40 text-center m-5">
                 <h1>{t('home.title')}</h1>
@@ -177,7 +169,7 @@ export default function HomePage() {
                               alt={project.title}
                               className="w-20 h-20 mx-auto"
                             />
-                            <p className="mt-2">{project.description}</p>
+                            <p className="mt-2">{project.titleDescription}</p>
                           </Link>
                         </div>
                       ))}
@@ -247,6 +239,7 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
           <Footer />
         </DarkModeContext.Provider>
       </div>

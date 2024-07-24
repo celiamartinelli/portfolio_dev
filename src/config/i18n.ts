@@ -26,6 +26,7 @@ const transformProjectData = (data) => {
   return {
     projects,
     softSkills: data.softSkills,
+    qualities: data.qualities,
   };
 };
 
@@ -48,6 +49,7 @@ const resources = {
         p2: 'Here are some projects I have worked on',
         projects: projectDataEN.projects,
         softSkills: projectDataEN.softSkills,
+        qualities: projectDataEN.qualities,
       },
       about: {
         title: 'About me',
@@ -73,7 +75,12 @@ const resources = {
         messageSent: 'Message sent',
         messageError: 'Error sending message',
       },
-      header: {},
+      header: {
+        home: 'Home',
+        portfolio: 'Portfolio',
+        about: 'About',
+        contact: 'Contact',
+      },
       footer: {
         copyright: 'Copyright 2024 Directed by Célia Martinelli',
         madeBy: 'Made with',
@@ -101,6 +108,7 @@ const resources = {
         p2: "Voici quelques projets que j'ai réalisés",
         projects: projectDataFR.projects,
         softSkills: projectDataFR.softSkills,
+        qualities: projectDataFR.qualities,
       },
       about: {
         title: 'À propos de moi',
@@ -126,7 +134,12 @@ const resources = {
         messageSent: 'Message envoyé',
         messageError: "Erreur lors de l'envoi du message",
       },
-      header: {},
+      header: {
+        home: 'Accueil',
+        portfolio: 'Portfolio',
+        about: 'À propos',
+        contact: 'Contact',
+      },
       footer: {
         copyright: "Droits d'auteur 2024 Réalisé par Célia Martinelli",
         madeBy: 'Fait avec',

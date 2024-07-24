@@ -1,6 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  darkMode: 'selector',
   theme: {
     extend: {
       colors: {
@@ -24,6 +25,7 @@ export default {
       },
       backgroundImage: {
         'custom-bg': "url('/assets/bg.png')",
+        'custom-bg-dark': "url('/assets/bg-dark.png')",
       },
     },
   },
