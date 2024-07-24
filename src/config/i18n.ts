@@ -6,15 +6,15 @@ import { BiCopyright } from 'react-icons/bi';
 
 // Transformation des données JSON en un format utilisable pour les traductions
 const transformProjectData = (data) => {
-  return data.projects.reduce((acc, project) => {
-    const key = Object.keys(project)[0]; // Obtient la clé du projet (nom du projet)
+  const projects = data.projects.map((project) => {
+    const key = Object.keys(project)[0];
     const projectInfo = project[key];
-    acc[key] = {
+    return {
       id: projectInfo.id,
       title: projectInfo.title,
       description: projectInfo.description,
       technologies: Array.isArray(projectInfo.technologies)
-        ? projectInfo.technologies // Conservez les technologies comme tableau
+        ? projectInfo.technologies
         : [],
       github: projectInfo.github,
       demo: projectInfo.demo,
@@ -22,8 +22,11 @@ const transformProjectData = (data) => {
       gif: projectInfo.gif,
       titleDescription: projectInfo.titleDescription,
     };
-    return acc;
-  }, {});
+  });
+  return {
+    projects,
+    softSkills: data.softSkills,
+  };
 };
 
 const projectDataEN = transformProjectData(translationEN);
@@ -43,7 +46,8 @@ const resources = {
           "I'm a web developer passionate about creating effective and innovative software solutions. I have a strong experience in JavaScript, React, Node.js, React Native and other web development technologies. I've worked on many exciting projects and gained solid experience in various areas of web development.",
         title2: 'Projects',
         p2: 'Here are some projects I have worked on',
-        ...projectDataEN,
+        projects: projectDataEN.projects,
+        softSkills: projectDataEN.softSkills,
       },
       about: {
         title: 'About me',
@@ -95,14 +99,15 @@ const resources = {
           "Je suis développeuse web passionnée par la création de solutions logicielles efficaces et innovantes. J'ai une solide expérience en JavaScript, React, Node.js, React Native et d'autres technologies de développement web. J'ai travaillé sur de nombreux projets passionnants et j'ai acquis une solide expérience dans divers domaines du développement web.",
         title2: 'Projets',
         p2: "Voici quelques projets que j'ai réalisés",
-        ...projectDataFR,
+        projects: projectDataFR.projects,
+        softSkills: projectDataFR.softSkills,
       },
       about: {
         title: 'À propos de moi',
         paraph:
           "J'aime résoudre des problèmes complexes et créer des solutions logicielles qui ont un impact réel. Je suis toujours à la recherche de nouvelles opportunités pour apprendre et grandir n tant que développeur. Si vous êtes intéressé par mon travail ou si vous souhaitez discuter d'une opportunité potentielle, n'hésitez pas à me contacter.",
         hardSkill: 'Hard Skills',
-        softskill: 'Soft Skills',
+        softSkill: 'Soft Skills',
       },
       contact: {
         title: 'Contactez-moi',

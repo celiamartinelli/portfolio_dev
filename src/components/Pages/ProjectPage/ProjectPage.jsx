@@ -8,10 +8,10 @@ export default function ProjectPage() {
   const { path } = useParams();
   const projectId = parseInt(path, 10);
 
-  const projectKey = `project${projectId}`;
-  const project = t(`portfolio.${projectKey}`, { returnObjects: true });
+  const projects = t('portfolio.projects', { returnObjects: true });
+  const project = projects.find((p) => p.id === projectId);
 
-  console.log('Technologies:', project.technologies);
+  // console.log('projet:', project);
 
   if (!project) {
     return <div>{t('portfolio.projectNotFound')}</div>;

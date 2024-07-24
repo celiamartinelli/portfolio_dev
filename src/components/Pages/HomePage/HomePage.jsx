@@ -38,10 +38,9 @@ export default function HomePage() {
   }, [location]);
 
   const projects = useMemo(() => {
-    const keys = Object.keys(t('portfolio', { returnObjects: true }));
-    return keys
-      .filter((key) => key.startsWith('project'))
-      .map((key) => t(`portfolio.${key}`, { returnObjects: true }));
+    const data = t('portfolio.projects', { returnObjects: true });
+    console.log('Projects Data:', data);
+    return Array.isArray(data) ? data : [];
   }, [t]);
 
   const technologies = [
@@ -54,15 +53,6 @@ export default function HomePage() {
     'Supabase',
     'Expo',
     'TailwindCSS',
-  ];
-  const softSkills = [
-    "Capacité d'adaptation",
-    'Motivation',
-    'Gestion du Temps',
-    'Autodiscipline',
-    'Résolution de prioblème',
-    'Curiosité',
-    'Sens de la communication',
   ];
 
   useEffect(() => {
@@ -168,14 +158,14 @@ export default function HomePage() {
                       {projects.map((project) => (
                         <div
                           key={project.id}
-                          className="m-4 p-4 rounded-lg shadow-xl w-72 transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-white
+                          className="m-4 p-4 rounded-lg shadow-xl bg-white bg-opacity-30 w-72 transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-white
                           
                           
-                           hover:bg-opacity-50"
+                           hover:bg-opacity-75"
                         >
                           <Link
                             to={`/project/${project.id}`}
-                            className="text-blue-500 hover:underline mt-2 block"
+                            className="text-blue-500 mt-2 block"
                             data-id={project.id}
                           >
                             <h3 className="text-xl font-semibold">
@@ -205,7 +195,6 @@ export default function HomePage() {
                 <p className="text-center">{t('about.paraph')}</p>
                 <div>
                   <h2 className="text-center font-bold">
-                    {' '}
                     {t('about.hardSkill')}
                   </h2>
                   <ul className="flex flex-wrap justify-center">
@@ -221,18 +210,14 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h2 className="text-center font-bold">
-                    {' '}
                     {t('about.softSkill')}
                   </h2>
                   <ul className="flex flex-wrap justify-center">
-                    {softSkills.map((tech) => (
-                      <li
-                        key={tech}
-                        className="mr-2 py-1 px-2 rounded  bg-emerald-800  m-1"
-                      >
-                        {tech}
-                      </li>
-                    ))}
+                    {t('portfolio.softSkills', { returnObjects: true }).map(
+                      (skill) => (
+                        <li key={skill}>{skill}</li>
+                      )
+                    )}
                   </ul>
                 </div>
               </div>
