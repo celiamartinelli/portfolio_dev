@@ -32,36 +32,36 @@ export default function Header() {
           <Link
             to="/#home"
             onClick={() => setActiveLink('home')}
-            className={`p-2 rounded-full ${
+            className={`mx-1 p-2 rounded-full ${
               activeLink === 'home' ? 'bg-white  bg-opacity-50' : ''
-            }`}
+            } hover:bg-white hover:bg-opacity-50`}
           >
             {t('header.home')}
           </Link>
           <Link
             to="/#portfolio"
             onClick={() => setActiveLink('portfolio')}
-            className={`p-2 rounded-full ${
+            className={`mx-1 p-2 rounded-full ${
               activeLink === 'portfolio' ? 'bg-white  bg-opacity-50' : ''
-            }`}
+            } hover:bg-white hover:bg-opacity-50`}
           >
             {t('header.portfolio')}
           </Link>
           <Link
             to="/#about"
             onClick={() => setActiveLink('about')}
-            className={`p-2 rounded-full ${
-              activeLink === 'about' ? 'bg-white bg-opacity-50' : ''
-            }`}
+            className={`mx-1 p-2 rounded-full ${
+              activeLink === 'about' ? 'bg-white  bg-opacity-50' : ''
+            } hover:bg-white hover:bg-opacity-50`}
           >
             {t('header.about')}
           </Link>
           <Link
             to="/#contact"
             onClick={() => setActiveLink('contact')}
-            className={`p-2 rounded-full ${
-              activeLink === 'contact' ? 'bg-white bg-opacity-50' : ''
-            }`}
+            className={`mx-1 p-2 rounded-full ${
+              activeLink === 'contact' ? 'bg-white  bg-opacity-50' : ''
+            } hover:bg-white hover:bg-opacity-50`}
           >
             {t('header.contact')}
           </Link>
