@@ -29,7 +29,9 @@ export default function ProjectPage() {
   return (
     <div
       className={`w-screen h-screen bg-cover ${
-        isDarkMode ? 'bg-custom-bg-dark' : 'bg-custom-bg'
+        isDarkMode
+          ? 'bg-custom-bg-dark ransition-colors duration-500'
+          : 'bg-custom-bg ransition-colors duration-500'
       }`}
     >
       <div className="flex flex-col justify-center min-h-screen">
@@ -49,7 +51,7 @@ export default function ProjectPage() {
               rel="noopener noreferrer"
               target="_blank"
               to={project.demo}
-              className=" bg-lightBlue p-4 rounded-lg shadow-md mx-2"
+              className=" bg-lightButtonNav text-lightTextButtonNav dark:bg-darkButtonNav dark:text-darkTextButtonNav  p-4 rounded-lg shadow-md mx-2"
             >
               {t('projectPage.visitSite')} {project.title}
             </Link>
@@ -57,7 +59,7 @@ export default function ProjectPage() {
             <Link
               rel="noopener noreferrer"
               target="_blank"
-              className=" bg-lightBlue p-4 rounded-lg shadow-md mx-2 flex items-center"
+              className=" bg-lightButtonNav text-lightTextButtonNav dark:bg-darkButtonNav dark:text-darkTextButtonNav p-4 rounded-lg shadow-md mx-2 flex items-center"
               to={project.github}
             >
               <FaGithub className="text-2xl mr-2" />
@@ -71,7 +73,7 @@ export default function ProjectPage() {
                 {technologies.map((tech) => (
                   <li
                     key={tech}
-                    className="bg-lightMint rounded-md p-1 px-2 m-1 mx-2 shadow-md"
+                    className="rounded-md p-1 px-2 m-1 mx-2 shadow-md bg-lightTag dark:bg-darkTag text-lightTextTag dark:text-darkTextTag"
                   >
                     {tech}
                   </li>

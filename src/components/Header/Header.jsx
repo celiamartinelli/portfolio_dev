@@ -34,7 +34,7 @@ export default function Header() {
             onClick={() => setActiveLink('home')}
             className={`mx-1 p-2 rounded-full ${
               activeLink === 'home' ? 'bg-white  bg-opacity-50' : ''
-            } hover:bg-white hover:bg-opacity-50`}
+            } hover:bg-white hover:bg-opacity-75 hover:animate-background-fade`}
           >
             {t('header.home')}
           </Link>
@@ -43,7 +43,7 @@ export default function Header() {
             onClick={() => setActiveLink('portfolio')}
             className={`mx-1 p-2 rounded-full ${
               activeLink === 'portfolio' ? 'bg-white  bg-opacity-50' : ''
-            } hover:bg-white hover:bg-opacity-50`}
+            } hover:bg-white hover:bg-opacity-75 hover:animate-background-fade`}
           >
             {t('header.portfolio')}
           </Link>
@@ -52,7 +52,7 @@ export default function Header() {
             onClick={() => setActiveLink('about')}
             className={`mx-1 p-2 rounded-full ${
               activeLink === 'about' ? 'bg-white  bg-opacity-50' : ''
-            } hover:bg-white hover:bg-opacity-50`}
+            } hover:bg-white hover:bg-opacity-75 hover:animate-background-fade`}
           >
             {t('header.about')}
           </Link>
@@ -61,7 +61,7 @@ export default function Header() {
             onClick={() => setActiveLink('contact')}
             className={`mx-1 p-2 rounded-full ${
               activeLink === 'contact' ? 'bg-white  bg-opacity-50' : ''
-            } hover:bg-white hover:bg-opacity-50`}
+            } hover:bg-white hover:bg-opacity-75 hover:animate-background-fade`}
           >
             {t('header.contact')}
           </Link>

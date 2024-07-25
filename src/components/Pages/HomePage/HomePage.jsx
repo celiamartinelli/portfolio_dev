@@ -56,6 +56,71 @@ export default function HomePage() {
     'TailwindCSS',
   ];
 
+  // Helper function to interpolate between two colors
+  const interpolateColor = (color1, color2, factor) => {
+    const result = color1
+      .slice(1)
+      .match(/.{2}/g)
+      .map((hex, i) => {
+        const v1 = parseInt(hex, 16);
+        const v2 = parseInt(color2.slice(1).match(/.{2}/g)[i], 16);
+        const val = Math.round(v1 + factor * (v2 - v1))
+          .toString(16)
+          .padStart(2, '0');
+        return val;
+      });
+    return `#${result.join('')}`;
+  };
+
+  // Function to smoothly transition Vanta colors
+  const transitionVantaColors = (duration) => {
+    const steps = 30; // Number of steps in the transition
+    const intervalTime = duration / steps;
+    let currentStep = 0;
+
+    const initialColors = {
+      highlightColor: isDarkMode ? '#c4cdfc' : '#4859aa',
+      midtoneColor: isDarkMode ? '#96ffff' : '#479696',
+      lowlightColor: isDarkMode ? '#71ff81' : '#157021',
+      baseColor: isDarkMode ? undefined : '#000000',
+    };
+
+    const targetColors = {
+      highlightColor: isDarkMode ? '#4859aa' : '#c4cdfc',
+      midtoneColor: isDarkMode ? '#479696' : '#96ffff',
+      lowlightColor: isDarkMode ? '#157021' : '#71ff81',
+      baseColor: isDarkMode ? '#000000' : undefined,
+    };
+
+    const updateColors = () => {
+      const factor = currentStep / steps;
+      vantaRef.current.setOptions({
+        highlightColor: interpolateColor(
+          initialColors.highlightColor,
+          targetColors.highlightColor,
+          factor
+        ),
+        midtoneColor: interpolateColor(
+          initialColors.midtoneColor,
+          targetColors.midtoneColor,
+          factor
+        ),
+        lowlightColor: interpolateColor(
+          initialColors.lowlightColor,
+          targetColors.lowlightColor,
+          factor
+        ),
+        baseColor: targetColors.baseColor,
+      });
+      currentStep += 1;
+      if (currentStep <= steps) {
+        setTimeout(updateColors, intervalTime);
+      }
+    };
+
+    updateColors();
+  };
+
   useEffect(() => {
     if (myRef.current) {
       if (vantaRef.current) vantaRef.current.destroy();
@@ -82,7 +147,14 @@ export default function HomePage() {
         if (vantaRef.current) vantaRef.current.destroy();
       };
     }
+  }, []);
+
+  useEffect(() => {
+    if (vantaRef.current) {
+      transitionVantaColors(1000); // Smooth transition over 1 second
+    }
   }, [isDarkMode]);
+
   const contextValue = useMemo(
     () => ({ isDarkMode, setIsDarkMode, textColor, setTextColor }),
     [isDarkMode, setIsDarkMode, textColor]
@@ -96,7 +168,7 @@ export default function HomePage() {
     <div className="relative w-screen h-screen">
       <div
         ref={myRef}
-        className="animation display flex flex-col justify-center min-h-screen"
+        className="animation display flex flex-col justify-center min-h-screen "
       >
         <DarkModeContext.Provider value={contextValue}>
           <div id="home">
@@ -193,7 +265,7 @@ export default function HomePage() {
                     {technologies.map((tech) => (
                       <li
                         key={tech}
-                        className="mr-2 py-1 px-2 rounded bg-lightMint m-1"
+                        className="mr-2 py-1 px-2 rounded bg-lightTag dark:bg-darkTag m-1 shadow-md"
                       >
                         {tech}
                       </li>
@@ -207,7 +279,12 @@ export default function HomePage() {
                   <ul className="flex flex-wrap justify-center">
                     {t('portfolio.softSkills', { returnObjects: true }).map(
                       (skill) => (
-                        <li key={skill}>{skill}</li>
+                        <li
+                          className="bg-lightTagSoft dark:bg-darkButtonNav py-1 px-2 rounded-md m-1 shadow-md"
+                          key={skill}
+                        >
+                          {skill}
+                        </li>
                       )
                     )}
                   </ul>
@@ -225,7 +302,7 @@ export default function HomePage() {
                     {t('contact.paraphp1')} <br />
                     <a
                       href="mailto:celia.martinelli2@gmail.com"
-                      className="text-emerald-500"
+                      className="bg-lightButtonNav dark:bg-darkButtonNav text-lightTextButtonNav dark:text-darkTextButtonNav p-2 rounded-lg shadow-md "
                     >
                       celiamartinelli2@gmail.com
                     </a>{' '}

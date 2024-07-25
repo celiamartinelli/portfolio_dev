@@ -8,7 +8,7 @@ import Header from '../Header/Header';
 export default function App() {
   return (
     <DarkModeProvider>
-      <div className="relative text-black dark:text-white w-screen h-screen ">
+      <div className="relative text-black transition-colors duration-500 dark:text-white w-screen h-screen dark:transition-colors dark:duration-500 ">
         <Header className="z-10" />
         <Routes>
           <Route path="/" element={<HomePage />} />
