@@ -183,12 +183,37 @@ export default function HomePage() {
                 </div>
                 <p className="text-m">{t('home.com')}</p>
               </div>
+              <div className="text-center p-4">
+                {/* <button
+                  type="button"
+                  className="relative inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-teal-300 to-lime-300 group-hover:from-teal-300 group-hover:to-lime-300 dark:text-white dark:hover:text-gray-900 focus:ring-4 focus:outline-none focus:ring-lime-200 dark:focus:ring-lime-800 active:animate-press hover animate-pulse"
+                >
+                  <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white bg-opacity-75 dark:bg-gray-900 rounded-md group-hover:bg-opacity-0">
+                    <a
+                      href="/assets/celia_martinelli_CV.pdf"
+                      download="celia_martinelli_CV.pdf"
+                      className="flex items-center justify-center"
+                    >
+                      Télécharger le CV
+                    </a>
+                  </span>
+                </button> */}
+                <button type="button">
+                  <a
+                    href="/assets/celia_martinelli_CV.pdf"
+                    download="celia_martinelli_CV.pdf"
+                    className="flex items-center justify-center border-2 bg-white bg-opacity-30 dark:bg-opacity-30 dark:border-lightButtonNav border-darkTagSoft px-8 py-2 rounded-2xl shadow-lg hover:group bg-gradient-to-br hover:from-teal-300 hover:to-lime-300 dark:text-white dark:hover:text-gray-900 transition-transform duration-300 ease-in-out hover:scale-105 hover:animate-background-fade active:animate-press"
+                  >
+                    Télécharger le CV
+                  </a>
+                </button>
+              </div>
             </div>
 
-            <div>
+            <div className="w-5/6 mx-auto">
               <div
                 id="portfolio"
-                className=" bg-white bg-opacity-30 rounded-2xl p-7 m-5"
+                className=" bg-white bg-opacity-50 rounded-2xl p-7 m-5"
               >
                 <h2 className="text-2xl font-bold text-center">
                   {t('portfolio.title')}
@@ -218,11 +243,11 @@ export default function HomePage() {
                   </h2>
                   <p className="text-center"> {t('portfolio.p2')}</p>
                   <div className="flex justify-center ">
-                    <ul className="flex flex-row flex-wrap">
+                    <ul className="flex flex-row flex-wrap justify-center">
                       {projects.map((project) => (
                         <div
                           key={project.id}
-                          className="m-4 p-4 rounded-lg shadow-xl bg-white bg-opacity-30 w-72 transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-white
+                          className="flex justify-center m-4 p-4 rounded-lg shadow-xl bg-white bg-opacity-50 w-3/12  transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-white
                           
                           
                            hover:bg-opacity-75"
@@ -232,7 +257,7 @@ export default function HomePage() {
                             className="text-blue-500 mt-2 block"
                             data-id={project.id}
                           >
-                            <h3 className="text-xl font-semibold">
+                            <h3 className="text-xl font-semibold text-center">
                               {project.title}
                             </h3>
 
@@ -241,7 +266,9 @@ export default function HomePage() {
                               alt={project.title}
                               className="w-20 h-20 mx-auto"
                             />
-                            <p className="mt-2">{project.titleDescription}</p>
+                            <p className="mt-2 text-center">
+                              {project.titleDescription}
+                            </p>
                           </Link>
                         </div>
                       ))}

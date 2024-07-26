@@ -47,14 +47,21 @@ export default {
           '0%': { opacity: '0' },
           '100%': { opacity: '1' },
         },
+        press: {
+          '0%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(0.95)' },
+          '100%': { transform: 'scale(1)' },
+        },
         'background-fade': {
           '0%': { backgroundColor: 'rgba(0,0,0,0)' },
           '100%': { backgroundColor: 'rgba(255,255,255,0.75)' },
         },
       },
       animation: {
-        fade: 'fade 1s ease-in-out',
+        fade: 'fade 0.5s ease-in-out',
         'background-fade': 'background-fade 0.5s ease-in-out',
+        press: 'press 0.5s ease-in-out',
+        pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 0.3) infinite',
       },
       transitionProperty: {
         bg: 'background-color',

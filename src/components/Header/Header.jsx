@@ -10,6 +10,7 @@ export default function Header() {
   const [activeLink, setActiveLink] = useState('a');
   const { isDarkMode, setIsDarkMode } = useDarkMode();
   const { t } = useTranslation();
+  const logo = isDarkMode ? '/assets/logo-dark.png' : '/assets/logo-light.png';
   return (
     <div className="relative">
       <button
@@ -19,22 +20,27 @@ export default function Header() {
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
       >
-        <Link to="/">
+        <Link
+          className="flex rounded-full shadow-md m-2 justify-center items-center bg-white bg-opacity-30 backdrop-blur-md hover:animate-press"
+          to="/"
+        >
           <img
-            src="/logoCM-vert.png"
+            src={logo}
             alt="Logo"
-            className="w-12 h-12 rounded-full shadow-md"
+            className="m-3  w-12 h-12 ransition-colors duration-500 "
           />
+          {/* <h2>&#123;C&#125;</h2>
+          <h2>M</h2> */}
         </Link>
       </button>
-      <nav className="fixed z-10 mt-4 p-4 left-1/2 transform -translate-x-1/2 text-xl w-full md:w-auto md:top-0 bottom-0 md:bottom-auto md:rounded-full bg-white bg-opacity-50 backdrop-blur-md ">
-        <ul className="flex justify-around ">
+      <nav className="fixed z-10 mt-4 p-4 left-1/2 transform -translate-x-1/2 text-xl w-full sm:w-auto sm:top-0 bottom-0 sm:bottom-auto sm:rounded-full bg-white bg-opacity-50 backdrop-blur-md ">
+        <ul className="flex justify-around text-sm md:text-base">
           <Link
             to="/#home"
             onClick={() => setActiveLink('home')}
             className={`mx-1 p-2 rounded-full ${
-              activeLink === 'home' ? 'bg-white  bg-opacity-50' : ''
-            } hover:bg-white hover:bg-opacity-75 hover:animate-background-fade`}
+              activeLink === 'home' ? 'bg-white  bg-opacity-75 text-black' : ''
+            } hover:bg-white hover:text-black hover:bg-opacity-75 active:animate-press hover:animate-background-fade `}
           >
             {t('header.home')}
           </Link>
@@ -42,8 +48,10 @@ export default function Header() {
             to="/#portfolio"
             onClick={() => setActiveLink('portfolio')}
             className={`mx-1 p-2 rounded-full ${
-              activeLink === 'portfolio' ? 'bg-white  bg-opacity-50' : ''
-            } hover:bg-white hover:bg-opacity-75 hover:animate-background-fade`}
+              activeLink === 'portfolio'
+                ? 'bg-white  bg-opacity-75 text-black'
+                : ''
+            } hover:bg-white hover:text-black hover:bg-opacity-75 active:animate-press hover:animate-background-fade`}
           >
             {t('header.portfolio')}
           </Link>
@@ -51,8 +59,8 @@ export default function Header() {
             to="/#about"
             onClick={() => setActiveLink('about')}
             className={`mx-1 p-2 rounded-full ${
-              activeLink === 'about' ? 'bg-white  bg-opacity-50' : ''
-            } hover:bg-white hover:bg-opacity-75 hover:animate-background-fade`}
+              activeLink === 'about' ? 'bg-white  bg-opacity-75 text-black' : ''
+            } hover:bg-white hover:text-black hover:bg-opacity-75 active:animate-press hover:animate-background-fade`}
           >
             {t('header.about')}
           </Link>
@@ -60,8 +68,10 @@ export default function Header() {
             to="/#contact"
             onClick={() => setActiveLink('contact')}
             className={`mx-1 p-2 rounded-full ${
-              activeLink === 'contact' ? 'bg-white  bg-opacity-50' : ''
-            } hover:bg-white hover:bg-opacity-75 hover:animate-background-fade`}
+              activeLink === 'contact'
+                ? 'bg-white  bg-opacity-75 text-black'
+                : ''
+            } hover:bg-white hover:text-black hover:bg-opacity-75 active:animate-press hover:animate-background-fade`}
           >
             {t('header.contact')}
           </Link>

@@ -28,7 +28,7 @@ export default function ProjectPage() {
 
   return (
     <div
-      className={`w-screen h-screen bg-cover ${
+      className={`w-screen h-100 bg-cover ${
         isDarkMode
           ? 'bg-custom-bg-dark ransition-colors duration-500'
           : 'bg-custom-bg ransition-colors duration-500'
@@ -47,15 +47,16 @@ export default function ProjectPage() {
             />
           </div>
           <div className="flex justify-center items-center">
-            <Link
-              rel="noopener noreferrer"
-              target="_blank"
-              to={project.demo}
-              className=" bg-lightButtonNav text-lightTextButtonNav dark:bg-darkButtonNav dark:text-darkTextButtonNav  p-4 rounded-lg shadow-md mx-2"
-            >
-              {t('projectPage.visitSite')} {project.title}
-            </Link>
-
+            {project.id !== 3 ? (
+              <Link
+                rel="noopener noreferrer"
+                target="_blank"
+                to={project.demo}
+                className=" bg-lightButtonNav text-lightTextButtonNav dark:bg-darkButtonNav dark:text-darkTextButtonNav  p-4 rounded-lg shadow-md mx-2"
+              >
+                {t('projectPage.visitSite')} {project.title}
+              </Link>
+            ) : null}
             <Link
               rel="noopener noreferrer"
               target="_blank"
