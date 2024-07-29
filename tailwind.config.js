@@ -10,6 +10,7 @@ export default {
         bgThirdGradient: '#7cd4e6',
         lightBlue: '#b4d9fc',
         blue: '#90bce5',
+        darkBlue: '#2967aa',
         lightMint: '#7edfd1',
         dark: '#0d0d0d',
         light: '#f5f5f5',

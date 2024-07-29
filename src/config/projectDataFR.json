@@ -31,7 +31,7 @@
         "id": 3,
         "title": "Coloc&Co",
         "img": "../../public/assets/project/coloc&co.png",
-        "titleDescription": "Application de gestion de colocation",
+        "titleDescription": "Application web de gestion de colocation",
         "gif": "../../public/assets/project/gif/giphy.gif",
         "description": "Coloc&co est une application conçue pour simplifier la gestion quotidienne et la communication au sein d'une colocation.",
         "technologies": [

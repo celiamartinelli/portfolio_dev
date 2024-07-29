@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <div className="relative">
       <button
-        className="fixed z-10 p-4 text-xl rounded-full"
+        className="fixed z-10 p-2 text-xl rounded-full"
         type="button"
         onClick={() => {
           window.scrollTo({ top: 0, behavior: 'smooth' });

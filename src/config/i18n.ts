@@ -37,7 +37,8 @@ const resources = {
   en: {
     translation: {
       home: {
-        title: "Hi, I'm Célia Martinelli, Nice to meet you",
+        title: 'Célia Martinelli',
+        subtitle: 'Full Stack Developer',
         iam: 'I am',
         com: 'I strive to create unique and engaging digital experiences',
         button1: 'Download CV',
@@ -58,6 +59,10 @@ const resources = {
         paraph:
           "I love solving complex problems and creating software solutions that have a real impact. I'm always looking for new opportunities to learn and grow as a developer. If you're interested in my work or want to discuss a potential opportunity, feel free to contact me.",
         hardSkill: 'Hard Skills',
+        hardTitle: 'Technical Skills',
+        hardsubTitle1: 'Front-end',
+        hardsubTitle2: 'Back-end',
+        hardsubTitle3: 'Project Management',
         softSkill: 'Soft Skills',
       },
       contact: {
@@ -98,7 +103,8 @@ const resources = {
   fr: {
     translation: {
       home: {
-        title: 'Bonjour, je suis Célia Martinelli, Enchantée',
+        title: 'Célia Martinelli',
+        subtitle: 'Développeuse Full Stack',
         iam: 'Je suis',
         com: "Je m'efforce de créer des expériences numériques uniques et engageantes",
         button1: 'Télécharger le CV',
@@ -119,6 +125,10 @@ const resources = {
         paraph:
           "J'aime résoudre des problèmes complexes et créer des solutions logicielles qui ont un impact réel. Je suis toujours à la recherche de nouvelles opportunités pour apprendre et grandir n tant que développeur. Si vous êtes intéressé par mon travail ou si vous souhaitez discuter d'une opportunité potentielle, n'hésitez pas à me contacter.",
         hardSkill: 'Hard Skills',
+        hardTitle: 'Compétences techniques',
+        hardsubTitle1: 'Front-end',
+        hardsubTitle2: 'Back-end',
+        hardsubTitle3: 'Gestion de Projet',
         softSkill: 'Soft Skills',
       },
       contact: {
