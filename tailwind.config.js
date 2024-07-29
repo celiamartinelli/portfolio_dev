@@ -37,6 +37,14 @@ export default {
         lightTextTagSoft: '#112a46',
         darkTagSoft: '#073328',
         darkTextTagSoft: '#f5f5f5',
+
+        // autre couleur DarkMode:
+        vertEmeraudLight: '#0a9090',
+        vertEmeraud: '#096f70',
+        vertDark: '#05262a',
+        vertFonce1: '#0f9f99',
+        vertClair: '#0ec0ba',
+        vertFonce2: '#089a90',
       },
       backgroundImage: {
         'custom-bg': "url('/assets/bg.png')",

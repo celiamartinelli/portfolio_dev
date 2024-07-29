@@ -204,7 +204,7 @@ export default function HomePage() {
                     download="celia_martinelli_CV.pdf"
                     className="flex items-center justify-center border-2 bg-white bg-opacity-30 dark:bg-opacity-30 dark:border-lightButtonNav border-darkTagSoft px-8 py-2 rounded-2xl shadow-lg hover:group bg-gradient-to-br hover:from-teal-300 hover:to-lime-300 dark:text-white dark:hover:text-gray-900 transition-transform duration-300 ease-in-out hover:scale-105 hover:animate-background-fade active:animate-press"
                   >
-                    Télécharger le CV
+                    {t('home.button1')}
                   </a>
                 </button>
               </div>
@@ -274,6 +274,9 @@ export default function HomePage() {
                       ))}
                     </ul>
                   </div>
+                  <div>
+                    <p className="text-center"> {t('portfolio.p3')}</p>
+                  </div>
                 </div>
               </div>
               <div
@@ -307,7 +310,7 @@ export default function HomePage() {
                     {t('portfolio.softSkills', { returnObjects: true }).map(
                       (skill) => (
                         <li
-                          className="bg-lightTagSoft dark:bg-darkButtonNav py-1 px-2 rounded-md m-1 shadow-md"
+                          className="bg-vertFonce1 dark:bg-vertDark py-1 px-2 rounded-md m-1 shadow-md"
                           key={skill}
                         >
                           {skill}
@@ -329,7 +332,7 @@ export default function HomePage() {
                     {t('contact.paraphp1')} <br />
                     <a
                       href="mailto:celia.martinelli2@gmail.com"
-                      className="bg-lightButtonNav dark:bg-darkButtonNav text-lightTextButtonNav dark:text-darkTextButtonNav p-2 rounded-lg shadow-md "
+                      className="bg-vertFonce1 dark:bg-vertDark text-lightTextButtonNav dark:text-darkTextButtonNav p-2 rounded-lg shadow-md "
                     >
                       celiamartinelli2@gmail.com
                     </a>{' '}

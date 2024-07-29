@@ -40,6 +40,7 @@ const resources = {
         title: "Hi, I'm Célia Martinelli, Nice to meet you",
         iam: 'I am',
         com: 'I strive to create unique and engaging digital experiences',
+        button1: 'Download CV',
       },
       portfolio: {
         title: 'Welcome to my portfolio',
@@ -50,6 +51,7 @@ const resources = {
         projects: projectDataEN.projects,
         softSkills: projectDataEN.softSkills,
         qualities: projectDataEN.qualities,
+        p3: 'Throughout the year, I had the opportunity to attend a bootcamp training that allowed me to acquire numerous skills and add multiple tools to my toolkit. At the end of this training, a six-month internship opportunity presented itself. The project involved developing a mobile application. There was no better way to expand my skill set than to dive into the world of mobile development with React Native and Expo.',
       },
       about: {
         title: 'About me',
@@ -99,6 +101,7 @@ const resources = {
         title: 'Bonjour, je suis Célia Martinelli, Enchantée',
         iam: 'Je suis',
         com: "Je m'efforce de créer des expériences numériques uniques et engageantes",
+        button1: 'Télécharger le CV',
       },
       portfolio: {
         title: 'Bienvenue sur mon portfolio',
@@ -109,6 +112,7 @@ const resources = {
         projects: projectDataFR.projects,
         softSkills: projectDataFR.softSkills,
         qualities: projectDataFR.qualities,
+        p3: "Au cours de l’année, j'ai eu l’occasion de suivre une formation en bootcamp qui m'a permis d’acquérir de nombreuses connaissances et d’ajouter de multiples outils à ma boîte à outils. À la fin de cette formation, une opportunité de stage de six mois s'est présentée à moi. Il s'agissait de développer une application mobile. Rien de mieux pour élargir ma gamme de compétences que de plonger dans le monde du développement mobile avec React Native et Expo.",
       },
       about: {
         title: 'À propos de moi',

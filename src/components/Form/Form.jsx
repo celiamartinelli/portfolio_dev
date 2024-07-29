@@ -56,7 +56,7 @@ export default function Form() {
       </label>
       <button
         type="submit"
-        className="mt-4 bg-emerald-800 text-white p-2 rounded w-full flex justify-center items-center active:bg-emerald-700"
+        className="mt-4 bg-vertFonce1 text-white p-2 rounded w-full flex justify-center items-center active:bg-emerald-700"
       >
         {t('form.send')}
       </button>
