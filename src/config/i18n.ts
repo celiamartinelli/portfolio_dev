@@ -3,6 +3,7 @@ import { initReactI18next } from 'react-i18next';
 import translationEN from './projectDataEN.json';
 import translationFR from './projectDataFR.json';
 import { BiCopyright } from 'react-icons/bi';
+import { TiThLarge } from 'react-icons/ti';
 
 // Transformation des données JSON en un format utilisable pour les traductions
 const transformProjectData = (data) => {
@@ -47,12 +48,13 @@ const resources = {
         title: 'Welcome to my portfolio',
         paraph:
           "I'm a web developer passionate about creating effective and innovative software solutions. I have a strong experience in JavaScript, React, Node.js, React Native and other web development technologies. I've worked on many exciting projects and gained solid experience in various areas of web development.",
-        title2: 'Projects',
+        title2: 'Web Applications Projects',
         p2: 'Here are some projects I have worked on',
         projects: projectDataEN.projects,
         softSkills: projectDataEN.softSkills,
         qualities: projectDataEN.qualities,
         p3: 'Throughout the year, I had the opportunity to attend a bootcamp training that allowed me to acquire numerous skills and add multiple tools to my toolkit. At the end of this training, a six-month internship opportunity presented itself. The project involved developing a mobile application. There was no better way to expand my skill set than to dive into the world of mobile development with React Native and Expo.',
+        title3: 'Mobile Applications Projects',
       },
       about: {
         title: 'About me',
@@ -113,12 +115,13 @@ const resources = {
         title: 'Bienvenue sur mon portfolio',
         paraph:
           "Je suis développeuse web passionnée par la création de solutions logicielles efficaces et innovantes. J'ai une solide expérience en JavaScript, React, Node.js, React Native et d'autres technologies de développement web. J'ai travaillé sur de nombreux projets passionnants et j'ai acquis une solide expérience dans divers domaines du développement web.",
-        title2: 'Projets',
+        title2: 'Projets Web Applications',
         p2: "Voici quelques projets que j'ai réalisés",
         projects: projectDataFR.projects,
         softSkills: projectDataFR.softSkills,
         qualities: projectDataFR.qualities,
         p3: "Au cours de l’année, j'ai eu l’occasion de suivre une formation en bootcamp qui m'a permis d’acquérir de nombreuses connaissances et d’ajouter de multiples outils à ma boîte à outils. À la fin de cette formation, une opportunité de stage de six mois s'est présentée à moi. Il s'agissait de développer une application mobile. Rien de mieux pour élargir ma gamme de compétences que de plonger dans le monde du développement mobile avec React Native et Expo.",
+        title3: 'Projets Mobiles Application',
       },
       about: {
         title: 'À propos de moi',
