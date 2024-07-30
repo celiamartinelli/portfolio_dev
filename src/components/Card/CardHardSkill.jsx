@@ -70,14 +70,16 @@ export default function CardHardSkill() {
     ],
   };
   return (
-    <div>
-      <h2 className="text-center font-bold">{t('about.hardSkill')}</h2>
+    <div className="mt-4">
+      <h2 className="text-center text-2xl mb-8 font-bold">
+        {t('about.hardSkill')}
+      </h2>
       <div className="flex flex-col lg:flex-row">
         <div className="border-x-2 border-t-2 rounded-t-lg p-8 lg:border-y-2 border-l-2 lg:rounded-l-lg lg:rounded-none lg:w-3/5">
           <div className="flex flex-col  justify-center items-center">
-            <div className=" p-4 rounded-full bg-lightTag dark:bg-darkBlue transition-colors duration-500 shadow-md mt-1">
+            <div className=" p-6 rounded-full bg-lightTag dark:bg-darkBlue dark:bg-opacity-75 transition-colors duration-500 shadow-md mt-1">
               <img
-                className="w-16 h-16"
+                className="w-14 h-14"
                 src={technologiesFront}
                 alt="front-end"
               />
@@ -101,7 +103,7 @@ export default function CardHardSkill() {
         </div>
         <div className="border-2 p-8 lg:border-y-2 lg:border-x-none lg:w-3/5">
           <div className="flex flex-col justify-center items-center">
-            <div className=" p-4 rounded-full bg-lightTag dark:bg-darkBlue transition-colors duration-500 shadow-md mt-1">
+            <div className=" p-4 rounded-full bg-lightTag dark:bg-darkBlue dark:bg-opacity-75 transition-colors duration-500 shadow-md mt-1">
               <img
                 className="w-16 h-16"
                 src={technologiesBack}
@@ -126,9 +128,9 @@ export default function CardHardSkill() {
         </div>
         <div className="border-x-2 border-b-2 rounded-b-lg p-8 lg:border-y-2 lg:border-r-2 lg:rounded-tr-lg  lg:rounded-br-lg  lg:rounded-bl-none lg:w-2/4">
           <div className="flex flex-col justify-center items-center">
-            <div className=" p-4 rounded-full bg-lightTag dark:bg-darkBlue transition-colors duration-500 shadow-md mt-1">
+            <div className=" p-6 rounded-full bg-lightTag dark:bg-darkBlue dark:bg-opacity-75 transition-colors duration-500 shadow-md mt-1">
               <img
-                className="w-16 h-16"
+                className="w-14 h-14"
                 src={technologiesManage}
                 alt="project-management"
               />

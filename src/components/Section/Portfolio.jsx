@@ -13,11 +13,14 @@ export default function Portfolio() {
   }, [t]);
 
   return (
-    <div id="portfolio" className=" bg-white bg-opacity-50 rounded-2xl p-7 m-5">
-      <h2 className="text-5xl font-bold text-center mb-3">
+    <div
+      id="portfolio"
+      className=" bg-white bg-opacity-50 rounded-2xl p-7 m-5 dark:bg-gray-500 dark:bg-opacity-30"
+    >
+      <h2 className="text-3xl font-bold text-center mb-8">
         {t('portfolio.title')}
       </h2>
-      <p className="text-center mb-4">{t('portfolio.paraph')}</p>
+      <p className="text-center mb-8">{t('portfolio.paraph')}</p>
       <div>
         <h2 className="text-center text-2xl font-bold mb-4">
           {t('portfolio.title2')}
@@ -28,7 +31,7 @@ export default function Portfolio() {
             {projects.map((project) => (
               <div
                 key={project.id}
-                className="relative flex justify-center m-4 p-4 rounded-lg shadow-xl bg-white bg-opacity-50 sm:w-3/12 transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-white  hover:bg-opacity-75 hover:m-6"
+                className="relative flex justify-center m-4 p-4 rounded-lg shadow-xl bg-white bg-opacity-50 sm:w-3/12 transition-transform duration-200 ease-in-out hover:scale-110 hover:bg-white  hover:bg-opacity-75 dark:hover:bg-gray-400 dark:hover:bg-opacity-50 hover:mx-6 dark:bg-gray-500 dark:bg-opacity-50"
               >
                 <Link
                   to={`/project/${project.id}`}
@@ -52,11 +55,11 @@ export default function Portfolio() {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="mt-8">
           <p className="text-center"> {t('portfolio.p3')}</p>
-          <h3 className="text-2xl font-semibold text-center">
+          {/* <h3 className="text-2xl font-semibold text-center">
             {t('portfolio.title3')}
-          </h3>
+          </h3> */}
         </div>
       </div>
     </div>

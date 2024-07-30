@@ -217,7 +217,7 @@ export default function HomePage() {
                   <a
                     href="/assets/celia_martinelli_CV.pdf"
                     download="celia_martinelli_CV.pdf"
-                    className="flex items-center justify-center border-2 bg-white bg-opacity-30 dark:bg-opacity-30 dark:border-lightButtonNav border-lightMint px-8 py-2 rounded-2xl shadow-lg hover:group bg-gradient-to-br hover:from-teal-300 hover:to-lime-300 dark:text-white dark:hover:text-gray-900 transition-transform duration-300 ease-in-out hover:scale-105 hover:animate-background-fade active:animate-press"
+                    className="flex items-center justify-center border-2 bg-white bg-opacity-30 dark:bg-opacity-30 dark:border-darkBG border-lightMint px-8 py-2 rounded-2xl shadow-lg hover:group bg-gradient-to-br hover:from-teal-300 hover:to-lime-300 dark:text-white transition-transform duration-300 ease-in-out hover:scale-105 hover:animate-background-fade active:animate-press dark:hover:group dark:bg-gradient-to-br dark:hover:from-rose-500 dark:hover:to-orange-400"
                   >
                     {t('home.button1')}
                   </a>

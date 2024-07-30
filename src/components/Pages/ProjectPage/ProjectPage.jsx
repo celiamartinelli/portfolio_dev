@@ -35,7 +35,7 @@ export default function ProjectPage() {
       }`}
     >
       <div className="flex flex-col justify-center min-h-screen">
-        <div className="bg-white bg-opacity-30 rounded-2xl p-7 w-10/12 flex flex-col justify-center items-center mx-auto mt-20 shadow-xl mb-10">
+        <div className="bg-white bg-opacity-30 rounded-2xl p-7 w-10/12 flex flex-col justify-center items-center mx-auto mt-28 shadow-xl mb-10 dark:bg-gray-500 dark:bg-opacity-30">
           <h1 className="text-3xl">{project.title}</h1>
           <p className="text-justify m-4">{project.description}</p>
 
@@ -74,7 +74,7 @@ export default function ProjectPage() {
                 {technologies.map((tech) => (
                   <li
                     key={tech}
-                    className="rounded-md p-1 px-2 m-1 mx-2 shadow-md bg-lightTag dark:bg-darkTag text-lightTextTag dark:text-darkTextTag"
+                    className="rounded-md p-1 px-2 m-1 mx-2 shadow-md bg-vertFonce1 text-white dark:bg-darkTag  dark:text-darkTextTag"
                   >
                     {tech}
                   </li>
