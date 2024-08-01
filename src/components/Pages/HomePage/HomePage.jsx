@@ -163,8 +163,8 @@ export default function HomePage() {
         lowlightColor: isDarkMode ? 0x157021 : 0x71ff81,
         baseColor: isDarkMode ? 0x0 : undefined,
         blurFactor: 0.9,
-        speed: 1.3,
-        zoom: 0.8,
+        speed: 4,
+        zoom: 1,
       });
 
       setVantaEffect(vantaRef.current);

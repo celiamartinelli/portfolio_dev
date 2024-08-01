@@ -70,6 +70,7 @@ export default {
       animation: {
         fade: 'fade 0.5s ease-in-out',
         'background-fade': 'background-fade 0.5s ease-in-out',
+
         press: 'press 0.5s ease-in-out',
         pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 0.3) infinite',
       },

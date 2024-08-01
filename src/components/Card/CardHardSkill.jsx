@@ -93,7 +93,7 @@ export default function CardHardSkill() {
             {technologies.frontEnd.map((tech) => (
               <li
                 key={tech.name}
-                className="flex items-center mr-2 py-1 px-2 dark:text-black m-1 rounded-md shadow-md bg-white bg-opacity-50"
+                className="flex items-center mr-2 py-1 px-2 dark:text-black m-1 rounded-md shadow-md bg-white bg-opacity-50 dark:bg-opacity-75"
               >
                 {tech.icon}
                 <span className="mx-1">{tech.name}</span>
@@ -118,7 +118,7 @@ export default function CardHardSkill() {
             {technologies.backEnd.map((tech) => (
               <li
                 key={tech.name}
-                className="flex items-center mr-2 py-1 px-2 dark:text-black m-1 rounded-md shadow-md  bg-white bg-opacity-50"
+                className="flex items-center mr-2 py-1 px-2 dark:text-black m-1 rounded-md shadow-md  bg-white bg-opacity-50 dark:bg-opacity-75"
               >
                 {tech.icon}
                 <span className="mx-1">{tech.name}</span>
@@ -143,7 +143,7 @@ export default function CardHardSkill() {
             {technologies.projectManagement.map((tech) => (
               <li
                 key={tech.name}
-                className="flex items-center mr-2 py-1 px-2 dark:text-black m-1 rounded-md shadow-md  bg-white bg-opacity-50"
+                className="flex items-center mr-2 py-1 px-2 dark:text-black m-1 rounded-md shadow-md  bg-white bg-opacity-50 dark:bg-opacity-75"
               >
                 {tech.icon}
                 <span className="mx-1">{tech.name}</span>

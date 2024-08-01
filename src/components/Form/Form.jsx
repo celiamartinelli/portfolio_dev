@@ -17,7 +17,7 @@ export default function Form() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col rounded-lg p-4 bg-lightMint dark:bg-darkBG w-80 h-150 my-5 shadow-lg"
+      className="flex flex-col rounded-lg p-4 bg-lightMint dark:bg-darkBG dark:bg-opacity-85 w-80 h-150 my-5 shadow-lg"
     >
       <label htmlFor="name" className="mb-2 text-white">
         {t('form.name')}
@@ -56,7 +56,7 @@ export default function Form() {
       </label>
       <button
         type="submit"
-        className="mt-4 bg-vertFonce1 dark:bg-darkBlue text-white p-2 rounded w-full flex justify-center items-center active:bg-emerald-700 transition ease-in duration-25 transform hover:scale-95"
+        className="mt-4 bg-vertFonce1 dark:bg-darkBlue text-white p-2 rounded w-full flex justify-center items-center active:bg-emerald-700 transition ease-in duration-25 transform hover:scale-95 shadow-md"
       >
         {t('form.send')}
       </button>

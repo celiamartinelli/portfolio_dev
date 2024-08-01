@@ -16,7 +16,7 @@ export default function Contact() {
       <div className="flex justify-center my-3">
         <Link
           to="mailto:celia.martinelli2@gmail.com"
-          className="px-5 flex justify-center items-center text-white  bg-vertFonce1 dark:bg-darkBlue  dark:text-darkTextButtonNav p-2 rounded-lg shadow-md transition ease-in duration-25 transform hover:scale-95"
+          className="px-5 flex justify-center items-center text-white  bg-vertFonce1 dark:bg-darkBlue dark:bg-opacity-75  dark:text-darkTextButtonNav p-2 rounded-lg shadow-md transition ease-in duration-25 transform hover:scale-95"
         >
           celiamartinelli2@gmail.com
         </Link>

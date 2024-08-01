@@ -28,7 +28,7 @@ export default function ProjectPage() {
 
   return (
     <div
-      className={`w-screen h-100 bg-cover ${
+      className={`w-screen h-100 pb-32 bg-cover ${
         isDarkMode
           ? 'bg-custom-bg-dark ransition-colors duration-500'
           : 'bg-custom-bg ransition-colors duration-500'
@@ -36,23 +36,21 @@ export default function ProjectPage() {
     >
       <div className="flex flex-col justify-center min-h-screen">
         <div className="bg-white bg-opacity-30 rounded-2xl p-7 w-10/12 flex flex-col justify-center items-center mx-auto mt-28 shadow-xl mb-10 dark:bg-gray-500 dark:bg-opacity-30">
-          <h1 className="text-3xl">{project.title}</h1>
-          <p className="text-justify m-4">{project.description}</p>
-
-          <div className="mb-4">
+          <div className="flex justify-center items-center">
+            <h1 className="text-3xl mr-3">{project.title}</h1>
             <img
-              className="rounded-lg shadow-md"
-              src={project.gif}
-              alt={`Capture d'écran de ${project.title}`}
+              src={`/assets/project/${project.img}`}
+              alt={`logo_${project.title}`}
+              className="w-12 shadow-md rounded-full"
             />
           </div>
-          <div className="flex justify-center items-center">
+          <div className="flex justify-center items-center mx-5 my-5">
             {project.id !== 3 ? (
               <Link
                 rel="noopener noreferrer"
                 target="_blank"
                 to={project.demo}
-                className=" bg-lightButtonNav text-lightTextButtonNav dark:bg-darkButtonNav dark:text-darkTextButtonNav  p-4 rounded-lg shadow-md mx-2"
+                className=" bg-lightButtonNav text-lightTextButtonNav dark:bg-vertFonce1 dark:text-darkTextButtonNav  p-2 rounded-lg shadow-md mx-2 text-center hover:animate-press duration-500 transition-transform"
               >
                 {t('projectPage.visitSite')} {project.title}
               </Link>
@@ -60,21 +58,31 @@ export default function ProjectPage() {
             <Link
               rel="noopener noreferrer"
               target="_blank"
-              className=" bg-lightButtonNav text-lightTextButtonNav dark:bg-darkButtonNav dark:text-darkTextButtonNav p-4 rounded-lg shadow-md mx-2 flex items-center"
+              className=" bg-lightButtonNav text-lightTextButtonNav dark:bg-vertFonce1 dark:text-darkTextButtonNav p-2 rounded-lg shadow-md mx-2 flex items-center text-center hover:animate-press duration-500 transition-transform"
               to={project.github}
             >
               <FaGithub className="text-2xl mr-2" />
               {t('projectPage.viewCode')}
             </Link>
           </div>
+
+          <div className="mb-4 flex flex-col m-5">
+            <img
+              className="rounded-lg shadow-md"
+              src={project.gif}
+              alt={`Capture d'écran de ${project.title}`}
+            />
+            <p className="text-justify mt-8">{project.description}</p>
+          </div>
+
           <div className="mt-4 flex flex-col justify-center items-center">
             <h2> {t('projectPage.technologiesUsed')}</h2>
             {technologies.length > 0 ? (
-              <ul className="flex flex-wrap">
+              <ul className="flex flex-wrap justify-center">
                 {technologies.map((tech) => (
                   <li
                     key={tech}
-                    className="rounded-md p-1 px-2 m-1 mx-2 shadow-md bg-vertFonce1 text-white dark:bg-darkTag  dark:text-darkTextTag"
+                    className="rounded-md p-1 px-2 m-1 mx-2 shadow-md bg-vertFonce1 text-white dark:bg-darkBlue dark:bg-opacity-75  dark:text-darkTextTag"
                   >
                     {tech}
                   </li>
