@@ -190,6 +190,11 @@ export default function HomePage() {
     setTextColor(isDarkMode ? 'white' : 'black');
   }, [isDarkMode]);
 
+  const playSoundDownload = () => {
+    const audio = new Audio('../../../public/audio/music-note-download.mp3');
+    audio.play();
+  };
+
   return (
     <div className="relative w-screen h-screen">
       <div
@@ -213,7 +218,7 @@ export default function HomePage() {
                 <p className="mt-12 w-5/6 mx-auto">{t('home.com')}</p>
               </div>
               <div className="text-center p-4 ">
-                <button type="button">
+                <button onClick={playSoundDownload} type="button">
                   <a
                     href="/assets/celia_martinelli_CV.pdf"
                     download="celia_martinelli_CV.pdf"

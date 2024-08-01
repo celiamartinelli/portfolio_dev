@@ -11,6 +11,12 @@ export default function Header() {
   const { isDarkMode, setIsDarkMode } = useDarkMode();
   const { t } = useTranslation();
   const logo = isDarkMode ? '/assets/logo-dark.png' : '/assets/logo-light.png';
+
+  const playSound = () => {
+    const audio = new Audio('../../../public/audio/music-note.mp3');
+    audio.play();
+  };
+
   return (
     <div className="relative">
       <button
@@ -23,14 +29,13 @@ export default function Header() {
         <Link
           className="flex rounded-full shadow-md m-2 justify-center items-center bg-white bg-opacity-30 backdrop-blur-md hover:animate-press dark:bg-darkBlue dark:bg-opacity-75"
           to="/"
+          onClick={playSound}
         >
           <img
             src={logo}
             alt="Logo"
             className="m-3 w-12 h-12 transition-colors duration-500 "
           />
-          {/* <h2>&#123;C&#125;</h2>
-          <h2>M</h2> */}
         </Link>
       </button>
       <nav className="fixed z-10 mt-4 p-4 left-1/2 transform -translate-x-1/2 text-xl w-full sm:w-auto sm:top-0 bottom-0 sm:bottom-auto sm:rounded-full bg-white bg-opacity-50 dark:bg-gray-500 dark:bg-opacity-30  backdrop-blur-md ">
