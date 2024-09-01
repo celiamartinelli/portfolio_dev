@@ -45,7 +45,7 @@ export default function ProjectPage() {
             />
           </div>
           <div className="flex justify-center items-center mx-5 my-5">
-            {project.id !== 3 ? (
+            {project.id !== 2 && project.id !== 3 ? (
               <Link
                 rel="noopener noreferrer"
                 target="_blank"
