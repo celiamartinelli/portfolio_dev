@@ -47,7 +47,7 @@ export default function Portfolio() {
                     alt={project.title}
                     className="w-20 h-20 mx-auto"
                   />
-                  <p className=" mt-2 text-center ">
+                  <p className=" mt-2 text-center">
                     {project.titleDescription}
                   </p>
                 </Link>
