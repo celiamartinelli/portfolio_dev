@@ -4,8 +4,8 @@
       "project1": {
         "id": 1,
         "title": "Textile Guide",
-        "img": "../../public/assets/project/textile_guide.png",
-        "gif": "../../public/assets/project/gif/textile.gif",
+        "img": "/assets/project/textile_guide.png",
+        "gif": "/assets/project/gif/textile.gif",
         "titleDescription": "Web application for fabric guide",
         "description": "Textile-Guide is a web application developed with React, using Tailwind CSS for styling and TypeScript for robust, typed programming. The application allows users to see which fabrics match which sewing projects (pants, t-shirt, sweatshirt) and vice versa, which projects match which fabrics.",
         "technologies": ["React", "Tailwind CSS", "TypeScript", "Expo"],
@@ -17,9 +17,9 @@
       "project2": {
         "id": 2,
         "title": "Textile Guide srv",
-        "img": "../../public/assets/project/GT.png",
+        "img": "/assets/project/GT.png",
         "titleDescription": "Data management API for Textile Guide",
-        "gif": "../../public/assets/project/gif/textile.gif",
+        "gif": "/assets/project/gif/textile.gif",
         "description": "Textile Guide srv is the backend API for the Textile Guide project, built with Strapi, a Headless CMS. This API manages all data related to fabrics and sewing projects, providing a flexible and extensible interface for content management. It facilitates seamless communication between the front-end and the database, ensuring that users can efficiently search, filter, and match fabrics with sewing projects. Textile Guide srv also handles user management, permissions, and data validation, making the application secure and robust.",
         "technologies": ["Strapi", "Node.js", "SQLite", "JWT", "REST API"],
         "github": "https://github.com/celiamartinelli/textile-guide-srv",
@@ -30,9 +30,9 @@
       "project3": {
         "id": 3,
         "title": "Coloc&Co",
-        "img": "../../public/assets/project/coloc&co.png",
+        "img": "/assets/project/coloc&co.png",
         "titleDescription": "Web application for shared housing management",
-        "gif": "../../public/assets/project/gif/colocnco.gif",
+        "gif": "/assets/project/gif/colocnco.gif",
         "description": "Coloc&Co is a web application designed to simplify daily management and communication within a shared housing environment. The application is built using the MVC (Model-View-Controller) architecture, clearly separating business logic, presentation, and database interactions. The backend is developed with Node.js and Express.js, utilizing PostgreSQL for data management, offering a robust and scalable solution. The frontend is created with React, providing a responsive user experience, while SCSS is used for styling, enabling a modern and modular design.",
         "technologies": [
           "React",
