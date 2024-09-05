@@ -39,7 +39,7 @@ export default function ProjectPage() {
           <div className="flex justify-center items-center">
             <h1 className="text-3xl mr-3">{project.title}</h1>
             <img
-              src={`/assets/${project.img}`}
+              src={`${project.img}`}
               alt={`logo_${project.title}`}
               className="w-12 shadow-md rounded-full"
             />
