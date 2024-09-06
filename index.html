@@ -13,6 +13,12 @@
     <title>Célia Martinelli - Développeuse Web</title>
   </head>
   <body>
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="reason" />
+      <input type="email" name="email" />
+      <textarea name="description"></textarea>
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
