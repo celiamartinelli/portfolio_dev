@@ -86,6 +86,7 @@ const resources = {
         h1modal: 'Message sent successfully!',
         pmodal:
           'Thank you for your message. I will get back to you as soon as possible.',
+        close: 'Close',
       },
       header: {
         home: 'Home',
@@ -160,6 +161,7 @@ const resources = {
         messageError: "Erreur lors de l'envoi du message",
         h1modal: 'Message envoyé avec succès!',
         pmodal: 'Merci pour votre message. Je vous répondrai dès que possible.',
+        close: 'Fermer',
       },
       header: {
         home: 'Accueil',
