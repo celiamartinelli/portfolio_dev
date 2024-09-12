@@ -10,7 +10,7 @@ export default function SendSuccessfully({ onClose }) {
         <button
           type="button"
           onClick={onClose}
-          className="mt-4  bg-vertFonce1 dark:bg-darkBlue dark:text-white p-2 rounded flex justify-center items-center active:bg-emerald-700 transition ease-in duration-25 transform hover:scale-95 shadow-md"
+          className="mt-4  bg-vertFonce1 dark:bg-darkBlue text-white dark:text-black p-2 rounded flex justify-center items-center active:bg-emerald-700 transition ease-in duration-25 transform hover:scale-95 shadow-md"
         >
           {t('form.close')}
         </button>
