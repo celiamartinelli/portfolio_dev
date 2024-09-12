@@ -43,7 +43,7 @@ export default function Form() {
           {t('form.subject')}
           <input
             type="text"
-            id="name"
+            id="reason"
             name="reason"
             required
             className="border mt-1 p-2 rounded bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-inner shadow-emerald-500 dark:focus:ring-rose-500 dark:shadow-rose-400"
