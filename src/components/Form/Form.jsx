@@ -1,12 +1,8 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Form() {
   const { t } = useTranslation();
-  const [name, setName] = useState('');
-  const [reason, setReason] = useState('');
-  const [description, setDescription] = useState('');
-  const [email, setEmail] = useState('');
 
   return (
     <div id="contact-form">
@@ -27,8 +23,9 @@ export default function Form() {
           {t('form.name')}
           <input
             type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
+            id="name"
+            name="name"
+            required
             className="border mt-1 p-2 rounded bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-inner shadow-emerald-500 dark:focus:ring-rose-500 dark:shadow-rose-400"
           />
         </label>
@@ -36,8 +33,9 @@ export default function Form() {
           {t('form.email')}
           <input
             type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
+            id="email"
+            name="email"
+            required
             className="border mt-1 p-2 rounded bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-inner shadow-emerald-500 dark:focus:ring-rose-500 dark:shadow-rose-400"
           />
         </label>
@@ -45,16 +43,19 @@ export default function Form() {
           {t('form.subject')}
           <input
             type="text"
-            value={reason}
-            onChange={(e) => setReason(e.target.value)}
+            id="name"
+            name="reason"
+            required
             className="border mt-1 p-2 rounded bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-inner shadow-emerald-500 dark:focus:ring-rose-500 dark:shadow-rose-400"
           />
         </label>
         <label htmlFor="description" className="mb-2 text-white">
           {t('form.message')}
           <textarea
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            id="message"
+            name="message"
+            rows={4}
+            required
             className="border mt-1 p-2 rounded bg-white text-black w-full focus:outline-none border-none focus:ring-2 focus:ring-emerald-500 shadow-inner shadow-emerald-500 dark:focus:ring-rose-500 dark:shadow-rose-400"
           />
         </label>
