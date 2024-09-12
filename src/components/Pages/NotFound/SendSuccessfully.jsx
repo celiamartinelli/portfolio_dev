@@ -9,7 +9,7 @@ export default function SendSuccessfully({ children, onClose }) {
         <button
           type="button"
           onClick={onClose}
-          className="mt-4 bg-pink text-white py-2 px-4 rounded-md"
+          className="mt-4 bg-vertFonce1 dark:bg-darkBlue text-white p-2 rounded w-full flex justify-center items-center active:bg-emerald-700 transition ease-in duration-25 transform hover:scale-95 shadow-md"
         >
           {t('modal.close')}
         </button>
