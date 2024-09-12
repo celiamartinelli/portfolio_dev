@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export default function Form() {
@@ -8,24 +7,6 @@ export default function Form() {
   const [reason, setReason] = useState('');
   const [description, setDescription] = useState('');
   const [email, setEmail] = useState('');
-  const location = useLocation();
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-
-  //   console.log({ name, reason, description, email });
-  // };
-
-  const formRef = useRef < HTMLFormElement > null;
-
-  useEffect(() => {
-    if (location.state?.scrollToContact) {
-      const element = document.getElementById('contact-form');
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  }, [location]);
 
   return (
     <div id="contact-form">
@@ -37,8 +18,13 @@ export default function Form() {
         data-netlify="true"
         data-netlify-honeypot="bot-field"
         action="/"
-        ref={formRef}
       >
+        <input type="hidden" name="form-name" value="contact" />
+        <p className="hidden">
+          <label>
+            Ne pas remplir ce champ : <input name="bot-field" />
+          </label>
+        </p>
         <label htmlFor="name" className="mb-2 text-white">
           {t('form.name')}
           <input
