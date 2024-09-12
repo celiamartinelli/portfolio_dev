@@ -12,7 +12,7 @@ import { useTypewriter, Cursor } from 'react-simple-typewriter';
 //   FaReact,
 //   FaSlack,
 // } from 'react-icons/fa';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 // import {
 //   SiEjs,
 //   SiExpo,
@@ -27,7 +27,7 @@ import { Link, useLocation } from 'react-router-dom';
 // } from 'react-icons/si';
 import DarkModeContext from '../../../styles/DarkModeContext';
 import './HomePage.scss';
-import Form from '../../Form/Form';
+// import Form from '../../Form/Form';
 // import projectDataFR from '../../../config/projectDataFR.json';
 import Footer from '../../Footer/Footer';
 import { useDarkMode } from '../../App/DarkModeContext';

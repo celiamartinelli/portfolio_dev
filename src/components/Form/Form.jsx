@@ -1,8 +1,10 @@
-// import { useState } from 'react';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import SendSuccessfully from '../Pages/NotFound/SendSuccessfully';
 
 export default function Form() {
   const { t } = useTranslation();
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div id="contact-form">
@@ -67,6 +69,12 @@ export default function Form() {
           {t('form.send')}
         </button>
       </form>
+      {isModalOpen && (
+        <SendSuccessfully onClose={() => setIsModalOpen(false)}>
+          <h1>{t('form.h1modal')}</h1>
+          <p>{t('form.pmodal')}</p>
+        </SendSuccessfully>
+      )}
     </div>
   );
 }

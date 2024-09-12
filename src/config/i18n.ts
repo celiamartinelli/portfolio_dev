@@ -83,6 +83,9 @@ const resources = {
         invalidEmail: 'Invalid email',
         messageSent: 'Message sent',
         messageError: 'Error sending message',
+        h1modal: 'Message sent successfully!',
+        pmodal:
+          'Thank you for your message. I will get back to you as soon as possible.',
       },
       header: {
         home: 'Home',
@@ -99,6 +102,11 @@ const resources = {
         visitSite: 'Visit the site',
         viewCode: 'View source code',
         technologiesUsed: 'Technologies used',
+      },
+      NotFound: {
+        h1404: '404 - Page not found',
+        p404: 'Oops! The page you are looking for does not exist.',
+        back: 'Go Back',
       },
     },
   },
@@ -150,6 +158,8 @@ const resources = {
         invalidEmail: 'Email invalide',
         messageSent: 'Message envoyé',
         messageError: "Erreur lors de l'envoi du message",
+        h1modal: 'Message envoyé avec succès!',
+        pmodal: 'Merci pour votre message. Je vous répondrai dès que possible.',
       },
       header: {
         home: 'Accueil',
@@ -166,6 +176,11 @@ const resources = {
         visitSite: 'Visiter le site',
         viewCode: 'Voir le code source',
         technologiesUsed: 'Technologies utilisées',
+      },
+      NotFound: {
+        h1404: '404 - Page non trouvé',
+        p404: 'Oups! La page que vous recherchez n’existe pas.',
+        back: 'Retour',
       },
     },
   },
