@@ -49,7 +49,7 @@ export default function Form() {
             className="border mt-1 p-2 rounded bg-white text-black w-full focus:outline-none focus:ring-2 focus:ring-emerald-500 shadow-inner shadow-emerald-500 dark:focus:ring-rose-500 dark:shadow-rose-400"
           />
         </label>
-        <label htmlFor="description" className="mb-2 text-white">
+        <label htmlFor="message" className="mb-2 text-white">
           {t('form.message')}
           <textarea
             id="message"
