@@ -6,16 +6,41 @@ export default function Form() {
   const { t } = useTranslation();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
+  // Fonction pour gérer la soumission du formulaire
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Empêche le rechargement de la page
+
+    const form = e.target;
+    const formData = new FormData(form);
+
+    // Envoyer les données au backend de Netlify
+    try {
+      const response = await fetch('/', {
+        method: 'POST',
+        body: formData,
+      });
+
+      if (response.ok) {
+        setIsModalOpen(true); // Ouvre la modal en cas de succès
+        form.reset(); // Réinitialise le formulaire après la soumission
+      } else {
+        console.error('Erreur lors de la soumission du formulaire');
+      }
+    } catch (error) {
+      console.error('Erreur de soumission : ', error);
+    }
+  };
+
   return (
     <div id="contact-form">
       <form
-        // onSubmit={handleSubmit}
+        onSubmit={handleSubmit}
         className="flex flex-col rounded-lg p-4 bg-lightMint dark:bg-darkBG dark:bg-opacity-85 w-80 h-150 my-5 shadow-lg"
         name="contact"
         method="POST"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
-        action="/"
+        // action="/"
       >
         <input type="hidden" name="form-name" value="contact" />
         <p className="hidden">
