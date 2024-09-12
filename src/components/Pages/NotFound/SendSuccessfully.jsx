@@ -4,7 +4,7 @@ export default function SendSuccessfully({ children, onClose }) {
   const { t } = useTranslation();
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white dark: p-6 rounded-lg shadow-lg">
+      <div className="bg-white opacity-50 p-6 backdrop-blur-md rounded-lg shadow-lg">
         {children}
         <button
           type="button"
