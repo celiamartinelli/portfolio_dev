@@ -1,11 +1,12 @@
 import { useTranslation } from 'react-i18next';
 
-export default function SendSuccessfully({ children, onClose }) {
+export default function SendSuccessfully({ onClose }) {
   const { t } = useTranslation();
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
-      <div className="bg-white opacity-50 p-6 backdrop-blur-md rounded-lg shadow-lg">
-        {children}
+      <div className="bg-white rounded-lg shadow-lg">
+        <h1>{t('form.h1modal')}</h1>
+        <p>{t('form.pmodal')}</p>
         <button
           type="button"
           onClick={onClose}

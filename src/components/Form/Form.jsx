@@ -95,10 +95,7 @@ export default function Form() {
         </button>
       </form>
       {isModalOpen && (
-        <SendSuccessfully onClose={() => setIsModalOpen(false)}>
-          <h1>{t('form.h1modal')}</h1>
-          <p>{t('form.pmodal')}</p>
-        </SendSuccessfully>
+        <SendSuccessfully onClose={() => setIsModalOpen(!setIsModalOpen)} />
       )}
     </div>
   );
