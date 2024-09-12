@@ -21,9 +21,7 @@ export default function Form() {
       >
         <input type="hidden" name="form-name" value="contact" />
         <p className="hidden">
-          <label>
-            Ne pas remplir ce champ : <input name="bot-field" />
-          </label>
+          Ne pas remplir ce champ : <input name="bot-field" />
         </p>
         <label htmlFor="name" className="mb-2 text-white">
           {t('form.name')}
