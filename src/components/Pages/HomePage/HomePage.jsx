@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useMemo } from 'react';
 import FOG from 'vanta/dist/vanta.fog.min';
 import { useTranslation } from 'react-i18next';
+
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 // import {
 //   FaCss3Alt,
@@ -44,7 +45,7 @@ export default function HomePage() {
   const [textColor, setTextColor] = useState('black');
   const myRef = useRef(null);
   const vantaRef = useRef(null);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const words = t('portfolio.qualities', { returnObjects: true }) || [];
   const [text] = useTypewriter({
     words: words || [],
@@ -195,6 +196,11 @@ export default function HomePage() {
     audio.play();
   };
 
+  const cvFile =
+    i18n.language === 'fr'
+      ? '/assets/celia_martinelli_CV.pdf'
+      : '/assets/celia_martinelli_CV_en.pdf';
+
   return (
     <div className="relative w-screen h-screen">
       <div
@@ -220,8 +226,8 @@ export default function HomePage() {
               <div className="text-center p-4 ">
                 <button onClick={playSoundDownload} type="button">
                   <a
-                    href="/assets/celia_martinelli_CV.pdf"
-                    download="celia_martinelli_CV.pdf"
+                    href={cvFile}
+                    download={cvFile.split('/').pop()}
                     className="flex items-center justify-center border-2 bg-white bg-opacity-30 dark:bg-opacity-30 dark:border-darkBG border-lightMint px-8 py-2 rounded-2xl shadow-lg hover:group bg-gradient-to-br hover:from-teal-300 hover:to-lime-300 dark:text-white transition-transform duration-300 ease-in-out hover:scale-105 hover:animate-background-fade active:animate-press dark:hover:group dark:bg-gradient-to-br dark:hover:from-rose-500 dark:hover:to-orange-400"
                   >
                     {t('home.button1')}
