@@ -12,6 +12,23 @@ export default function Insert() {
       >
         <FaGithub className="text-5xl" />
       </Link>
+      {/* <div
+        className="badge-base LI-profile-badge"
+        data-locale="fr_FR"
+        data-size="large"
+        data-theme="dark"
+        data-type="HORIZONTAL"
+        data-vanity="celiamartinelli"
+        data-version="v1"
+      >
+        <a
+          className="badge-base__link LI-simple-link"
+          href="https://fr.linkedin.com/in/celiamartinelli?trk=profile-badge"
+        >
+          Celia Martinelli
+        </a>
+      </div> */}
+
       <Link
         rel="noopener noreferrer"
         target="_blank"
