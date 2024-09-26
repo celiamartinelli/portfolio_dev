@@ -248,7 +248,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="w-5/6 mx-auto">
+            <div className="w-11/12 md:w-5/6 mx-auto">
               <Portfolio />
               <About />
               <Contact />
