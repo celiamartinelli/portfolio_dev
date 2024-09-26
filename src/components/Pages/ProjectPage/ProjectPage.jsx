@@ -68,7 +68,7 @@ export default function ProjectPage() {
 
           <div className="mb-4 flex flex-col m-5">
             <img
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-md sm:w-2/3 mx-auto"
               src={project.gif}
               alt={`Capture d'écran de ${project.title}`}
             />

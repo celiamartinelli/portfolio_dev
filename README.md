@@ -1,5 +1,3 @@
-# portfolio_dev
-
 # Mon Portfolio
 
 Bienvenue dans mon portfolio ! Ce projet présente une collection de mes travaux, compétences et projets réalisés. Vous y trouverez des détails sur mon parcours, mes réalisations et mes compétences dans divers domaines.

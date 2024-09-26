@@ -129,13 +129,13 @@ const resources = {
         projects: projectDataFR.projects,
         softSkills: projectDataFR.softSkills,
         qualities: projectDataFR.qualities,
-        p3: "Au cours de l’année, j'ai eu l’occasion de suivre une formation en bootcamp qui m'a permis d’acquérir de nombreuses connaissances et d’ajouter de multiples outils à ma boîte à outils. À la fin de cette formation, une opportunité de stage de six mois s'est présentée à moi. Il s'agissait de développer une application mobile. Rien de mieux pour élargir ma gamme de compétences que de plonger dans le monde du développement mobile avec React Native et Expo.",
+        p3: "Au cours de l’année, j'ai eu l’occasion de suivre une formation intensive qui m'a permis d’acquérir de nombreuses connaissances et d’ajouter de multiples outils à ma boîte à outils. À la fin de cette formation, une opportunité de stage de six mois s'est présentée à moi. Il s'agissait de développer une application mobile. Rien de mieux pour élargir ma gamme de compétences que de plonger dans le monde du développement mobile avec React Native et Expo.",
         title3: 'Projets Mobiles Application',
       },
       about: {
         title: 'À propos de moi',
         paraph:
-          "J'aime résoudre des problèmes complexes et créer des solutions logicielles qui ont un impact réel. Je suis toujours à la recherche de nouvelles opportunités pour apprendre et grandir n tant que développeur. Si vous êtes intéressé par mon travail ou si vous souhaitez discuter d'une opportunité potentielle, n'hésitez pas à me contacter.",
+          "J'aime résoudre des problèmes complexes et créer des solutions logicielles qui ont un impact réel. Je suis toujours à la recherche de nouvelles opportunités pour apprendre et grandir en tant que développeur. Si vous êtes intéressé par mon travail ou si vous souhaitez discuter d'une opportunité potentielle, n'hésitez pas à me contacter.",
         hardSkill: 'Hard Skills',
         hardTitle: 'Compétences techniques',
         hardsubTitle1: 'Front-end',

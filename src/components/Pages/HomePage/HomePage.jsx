@@ -65,6 +65,10 @@ export default function HomePage() {
   //   ? '../../assets/project/technologies/project-management-dark.png'
   //   : '../../assets/project/technologies/project-management.png';
 
+  const scrollIcon = isDarkMode
+    ? '../../assets/scroll_nigth.png'
+    : '../../assets/scroll_ligth.png';
+
   const location = useLocation();
 
   useEffect(() => {
@@ -235,6 +239,13 @@ export default function HomePage() {
                 </button>
               </div>
               <Insert />
+              <div>
+                <img
+                  className="items-center justify-center w-16 h-16 mx-auto animate-bounce mt-12"
+                  src={scrollIcon}
+                  alt="scroll-down"
+                />
+              </div>
             </div>
 
             <div className="w-5/6 mx-auto">
