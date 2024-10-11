@@ -29,6 +29,25 @@
     {
       "project3": {
         "id": 3,
+        "title": "Moon Weather",
+        "img": "/assets/project/moon-weather.png",
+        "titleDescription": "Lunar Data Mobile Application",
+        "gif": "/assets/project/gif/moon-weather.gif",
+        "description": "Moon Weather est une application mobile qui permet aux utilisateurs de consulter les prévisions météorologiques de la  Lune. L'application est développée avec React Native, utilisant Tailwind CSS pour le style et TypeScript pour une programmation robuste et typée. Elle utilise l'API WeatherApi pour récupérer les données météorologiques, offrant une expérience utilisateur informative et ludique.",
+        "technologies": [
+          "React Native",
+          "Tailwind CSS",
+          "TypeScript",
+          "Expo",
+          "WeatherApi"
+        ],
+        "github": "https://github.com/celiamartinelli/moon-weather",
+        "demo": "link-to-demo-3"
+      }
+    },
+    {
+      "project4": {
+        "id": 4,
         "title": "Coloc&Co",
         "img": "/assets/project/coloc&co.png",
         "titleDescription": "Application web de gestion de colocation",
@@ -44,7 +63,7 @@
           "MVC Architecture"
         ],
         "github": "https://github.com/celiamartinelli/colocandcoFront",
-        "demo": "lien-vers-demo-3"
+        "demo": "lien-vers-demo-4"
       }
     }
   ],
