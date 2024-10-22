@@ -87,6 +87,13 @@ const resources = {
         pmodal:
           'Thank you for your message. I will get back to you as soon as possible.',
         close: 'Close',
+        error: {
+          name: 'Name is required.',
+          email: 'Email is required.',
+          invalidEmail: 'Please enter a valid email address.',
+          subject: 'Subject is required.',
+          message: 'Message is required.',
+        },
       },
       header: {
         home: 'Home',
@@ -162,6 +169,13 @@ const resources = {
         h1modal: 'Message envoyé avec succès!',
         pmodal: 'Merci pour votre message. Je vous répondrai dès que possible.',
         close: 'Fermer',
+        error: {
+          name: 'Le nom est requis.',
+          email: "L'adresse e-mail est requise.",
+          invalidEmail: 'Veuillez entrer une adresse e-mail valide.',
+          subject: 'Le sujet est requis.',
+          message: 'Le message est requis.',
+        },
       },
       header: {
         home: 'Accueil',
