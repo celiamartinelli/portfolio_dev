@@ -15,6 +15,8 @@ import {
   SiEjs,
   SiExpo,
   SiExpress,
+  SiFigma,
+  SiNextdotjs,
   SiNotion,
   SiPostgresql,
   SiRedux,
@@ -46,6 +48,7 @@ export default function CardHardSkill() {
     frontEnd: [
       { name: 'React', icon: <FaReact /> },
       { name: 'React Native', icon: <FaReact /> },
+      { name: 'Next', icon: <SiNextdotjs /> },
       { name: 'HTML', icon: <FaHtml5 /> },
       { name: 'CSS', icon: <FaCss3Alt /> },
       { name: 'JavaScript', icon: <FaJsSquare /> },
@@ -63,6 +66,8 @@ export default function CardHardSkill() {
     ],
     projectManagement: [
       { name: 'Expo', icon: <SiExpo /> },
+      { name: 'Figma', icon: <SiFigma /> },
+
       { name: 'Notion', icon: <SiNotion /> },
       { name: 'GitHub', icon: <FaGithub /> },
       { name: 'Git', icon: <FaGit /> },
