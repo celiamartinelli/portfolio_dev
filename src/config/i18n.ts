@@ -41,7 +41,7 @@ const resources = {
         title: 'Célia Martinelli',
         subtitle: 'Full Stack Developer',
         iam: 'I am',
-        com: 'I strive to create unique and engaging digital experiences',
+        com: 'Passionate about UI/UX, I invest carefully in every detail to offer intuitive and aesthetic interfaces. My keen sense of detail and creativity allow me to transform ideas into harmonious and engaging user experiences. Ready to bring my expertise to ambitious projects, I am motivated by innovation and the constant pursuit of quality.',
         button1: 'Download CV',
       },
       portfolio: {
@@ -124,7 +124,7 @@ const resources = {
         title: 'Célia Martinelli',
         subtitle: 'Développeuse Full Stack',
         iam: 'Je suis',
-        com: "Je m'efforce de créer des expériences numériques uniques et engageantes",
+        com: 'Passionnée par l’UI/UX, je m’investis avec soin dans chaque détail pour offrir des interfaces intuitives et esthétiques. Mon sens aiguisé du détail et ma créativité me permettent de transformer des idées en expériences utilisateur harmonieuses et engageantes. Prête à apporter mon expertise à des projets ambitieux, je suis motivée par l’innovation et la recherche constante de qualité.',
         button1: 'Télécharger le CV',
       },
       portfolio: {
