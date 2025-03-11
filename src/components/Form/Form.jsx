@@ -66,7 +66,7 @@ export default function Form() {
     <div id="contact-form">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col rounded-lg p-4 bg-lightMint dark:bg-darkBG dark:bg-opacity-85 sm:w-80 w-60 h-150 my-5 shadow-lg"
+        className="flex flex-col rounded-lg p-4 bg-lightMint dark:bg-darkBG dark:bg-opacity-85 sm:w-80 w-60 h-150 my-5 shadow-lg "
         name="contact"
         method="POST"
         data-netlify="true"

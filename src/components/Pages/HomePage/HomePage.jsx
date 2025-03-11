@@ -225,7 +225,9 @@ export default function HomePage() {
                     <Cursor cursorColor="green" />
                   </h1>
                 </div>
-                <p className="mt-12 w-5/6 mx-auto">{t('home.com')}</p>
+                <p className="mt-12 w-4/6 mx-auto">{t('home.com')}</p>
+                <p className="mt-12 w-4/6 mx-auto">{t('home.com2')}</p>
+                <p className="mt-12 w-4/6 mx-auto">{t('home.goal')}</p>
               </div>
               <div className="text-center p-4 ">
                 <button onClick={playSoundDownload} type="button">

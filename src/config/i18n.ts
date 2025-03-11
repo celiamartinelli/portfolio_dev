@@ -39,9 +39,12 @@ const resources = {
     translation: {
       home: {
         title: 'Célia Martinelli',
-        subtitle: 'Full Stack Developer',
+        subtitle:
+          '💡 Web developer with a dual mindset: 🧠 rigorous logic meets 🎨 boundless creativity.',
         iam: 'I am',
-        com: 'Passionate about UI/UX, I invest carefully in every detail to offer intuitive and aesthetic interfaces. My keen sense of detail and creativity allow me to transform ideas into harmonious and engaging user experiences. Ready to bring my expertise to ambitious projects, I am motivated by innovation and the constant pursuit of quality.',
+        com: '🚀 Coming from a career change, I initially chose web development out of pragmatism, but I soon discovered the perfect balance between structure 🏗️ and imagination ✨. I love designing well-thought-out applications where architecture 🏛️ and user experience 🖥️ seamlessly intertwine.',
+        com2: '💻 With a particular fondness for React ⚛️, I enjoy shaping how users navigate an application, structuring functionalities 🛠️, and collaborating 🤝 to bring impactful projects to life. My work on Yuli 💡 is a great example of this—just like the countless hours I spent perfecting Coloc & Co 🏡, because sometimes, coding for 36 hours straight ⏳ is just for the style. 😆',
+        goal: '🎯 My goal? To become an application designer 🏗️ and craft digital experiences 📲 that are as intuitive as they are powerful.',
         button1: 'Download CV',
       },
       portfolio: {
@@ -122,9 +125,13 @@ const resources = {
     translation: {
       home: {
         title: 'Célia Martinelli',
-        subtitle: 'Développeuse Full Stack',
+        subtitle:
+          '💡 Développeuse web au double visage : 🧠 logique rigoureuse et 🎨 créativité débordante.',
         iam: 'Je suis',
-        com: 'Passionnée par l’UI/UX, je m’investis avec soin dans chaque détail pour offrir des interfaces intuitives et esthétiques. Mon sens aiguisé du détail et ma créativité me permettent de transformer des idées en expériences utilisateur harmonieuses et engageantes. Prête à apporter mon expertise à des projets ambitieux, je suis motivée par l’innovation et la recherche constante de qualité.',
+
+        com: '🚀 Issue d’une reconversion, j’ai choisi le développement web par pragmatisme, mais j’y ai découvert un équilibre parfait entre structure 🏗️ et imagination ✨. J’aime concevoir des applications bien pensées où architecture 🏛️ et expérience utilisateur 🖥️ s’entrelacent harmonieusement.',
+        com2: '💻 Avec une affection particulière pour React ⚛️, j’adore imaginer comment on va naviguer dans une application, structurer ses fonctionnalités 🛠️ et collaborer 🤝 pour donner vie à des projets impactants. Mon travail sur Yuli 💡 en est un parfait exemple, tout comme mes 36 heures de code non-stop ⏳ sur Coloc & Co 🏡, juste pour le style. 😆',
+        goal: '🎯 Mon objectif ? Devenir conceptrice d’application 🏗️ et façonner des expériences digitales 📲 aussi intuitives que performantes.',
         button1: 'Télécharger le CV',
       },
       portfolio: {
