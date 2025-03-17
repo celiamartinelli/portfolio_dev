@@ -19,6 +19,7 @@ const transformProjectData = (data) => {
         : [],
       github: projectInfo.github,
       demo: projectInfo.demo,
+      iconType: projectInfo.iconType,
       img: projectInfo.img,
       gif: projectInfo.gif,
       titleDescription: projectInfo.titleDescription,
@@ -51,7 +52,7 @@ const resources = {
         title: 'Welcome to my portfolio',
         paraph:
           "I'm a web developer passionate about creating effective and innovative software solutions. I have a strong experience in JavaScript, React, Node.js, React Native and other web development technologies. I've worked on many exciting projects and gained solid experience in various areas of web development.",
-        title2: 'Web Applications Projects',
+        title2: 'Applications',
         p2: 'Here are some projects I have worked on',
         projects: projectDataEN.projects,
         softSkills: projectDataEN.softSkills,
@@ -105,7 +106,7 @@ const resources = {
         contact: 'Contact',
       },
       footer: {
-        copyright: 'Copyright 2024 Directed by Célia Martinelli',
+        copyright: 'Copyright 2025 Directed by Célia Martinelli',
         madeBy: 'Made with',
       },
       projectPage: {
@@ -138,7 +139,7 @@ const resources = {
         title: 'Bienvenue sur mon portfolio',
         paraph:
           "Je suis développeuse web passionnée par la création de solutions logicielles efficaces et innovantes. J'ai une solide expérience en JavaScript, React, Node.js, React Native et d'autres technologies de développement web. J'ai travaillé sur de nombreux projets passionnants et j'ai acquis une solide expérience dans divers domaines du développement web.",
-        title2: 'Projets Web Applications',
+        title2: 'Applications',
         p2: "Voici quelques projets que j'ai réalisés",
         projects: projectDataFR.projects,
         softSkills: projectDataFR.softSkills,
@@ -191,7 +192,7 @@ const resources = {
         contact: 'Contact',
       },
       footer: {
-        copyright: "Droits d'auteur 2024 Réalisé par Célia Martinelli",
+        copyright: "Droits d'auteur 2025 Réalisé par Célia Martinelli",
         madeBy: 'Fait avec',
       },
       projectPage: {

@@ -10,7 +10,8 @@
         "description": "Textile-Guide est une application web développée avec React, utilisant Tailwind CSS pour le style et TypeScript pour une programmation robuste et typée. L'application permet aux utilisateurs de voir quels tissus correspondent à quels projets de couture (pantalon, t-shirt, sweat-shirt) et vice versa, quels projets correspondent à quels tissus.",
         "technologies": ["React", "Tailwind CSS", "TypeScript", "Expo"],
         "github": "https://github.com/celiamartinelli/Textile_Guide_React",
-        "demo": "https://textile-guide.netlify.app/"
+        "demo": "https://textile-guide.netlify.app/",
+        "iconType": "web"
       }
     },
     {
@@ -23,7 +24,8 @@
         "description": "Textile Guide srv est l'API backend du projet Textile Guide, construite avec Strapi, un CMS Headless. Cette API gère toutes les données relatives aux tissus et aux projets de couture, offrant une interface flexible et extensible pour la gestion des contenus. Elle permet une communication fluide entre le front-end et la base de données, garantissant que les utilisateurs peuvent rechercher, filtrer et associer des tissus à des projets de couture de manière efficace. Textile Guide srv assure également la gestion des utilisateurs, des autorisations et des validations des données, rendant l'application sécurisée et robuste.",
         "technologies": ["Strapi", "Node.js", "SQLite", "JWT", "API REST"],
         "github": "https://github.com/celiamartinelli/textile-guide-srv",
-        "demo": "lien-vers-demo-2"
+        "demo": "lien-vers-demo-2",
+        "iconType": "api"
       }
     },
     {
@@ -42,7 +44,8 @@
           "WeatherApi"
         ],
         "github": "https://github.com/celiamartinelli/moon-weather",
-        "demo": "link-to-demo-3"
+        "demo": "link-to-demo-3",
+        "iconType": "mobile"
       }
     },
     {
@@ -63,7 +66,8 @@
           "MVC Architecture"
         ],
         "github": "https://github.com/celiamartinelli/colocandcoFront",
-        "demo": "lien-vers-demo-4"
+        "demo": "lien-vers-demo-4",
+        "iconType": "web"
       }
     }
   ],

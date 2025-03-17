@@ -213,7 +213,7 @@ export default function HomePage() {
       >
         <DarkModeContext.Provider value={contextValue}>
           <div id="home">
-            <div className="overflow-hidden h-screen">
+            <div className="overflow-hidden min-h-screen">
               <div className="text-lg mt-36 text-center my-10">
                 <h1 className="text-4xl my-2 tracking-wide">
                   {t('home.title')}
@@ -229,7 +229,7 @@ export default function HomePage() {
                 <p className="mt-8 w-4/6 mx-auto">{t('home.com2')}</p>
                 <p className="mt-8 w-4/6 mx-auto">{t('home.goal')}</p>
               </div>
-              <div className="text-center p-4 ">
+              <div className="text-center ">
                 <button onClick={playSoundDownload} type="button">
                   <a
                     href={cvFile}
@@ -243,7 +243,7 @@ export default function HomePage() {
               <Insert />
               <div>
                 <img
-                  className="items-center justify-center w-16 h-16 mx-auto animate-bounce mt-12"
+                  className="items-center justify-center w-16 h-16 mx-auto animate-bounce mt-10"
                   src={scrollIcon}
                   alt="scroll-down"
                 />

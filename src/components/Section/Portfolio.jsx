@@ -1,6 +1,10 @@
 import { useTranslation } from 'react-i18next';
 import { useMemo } from 'react';
 import { Link } from 'react-router-dom';
+import { CgWebsite } from 'react-icons/cg';
+import { CiMobile3 } from 'react-icons/ci';
+import { IoServerOutline } from 'react-icons/io5';
+import { BsGlobe2 } from 'react-icons/bs';
 // import { useDarkMode } from '../App/DarkModeContext';
 
 export default function Portfolio() {
@@ -35,9 +39,19 @@ export default function Portfolio() {
               >
                 <Link
                   to={`/project/${project.id}`}
-                  className="text-blue-500 mt-2 block "
+                  className="text-blue-500 block "
                   data-id={project.id}
                 >
+                  <div className="flex justify-end">
+                    {project.iconType && (
+                      <div className="bg-vertFonce1 rounded-full w-7 h-7 flex items-center justify-center text-white shadow-md">
+                        {project.iconType === 'web' && <BsGlobe2 />}
+                        {project.iconType === 'api' && <CiMobile3 />}
+                        {project.iconType === 'mobile' && <IoServerOutline />}
+                      </div>
+                    )}
+                  </div>
+
                   <h3 className="text-xl font-semibold text-center">
                     {project.title}
                   </h3>

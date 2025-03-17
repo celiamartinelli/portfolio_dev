@@ -10,7 +10,8 @@
         "description": "Textile-Guide is a web application developed with React, using Tailwind CSS for styling and TypeScript for robust, typed programming. The application allows users to see which fabrics match which sewing projects (pants, t-shirt, sweatshirt) and vice versa, which projects match which fabrics.",
         "technologies": ["React", "Tailwind CSS", "TypeScript", "Expo"],
         "github": "https://github.com/celiamartinelli/Textile_Guide_React",
-        "demo": "https://textile-guide.netlify.app/"
+        "demo": "https://textile-guide.netlify.app/",
+        "iconType": "web"
       }
     },
     {
@@ -23,7 +24,8 @@
         "description": "Textile Guide srv is the backend API for the Textile Guide project, built with Strapi, a Headless CMS. This API manages all data related to fabrics and sewing projects, providing a flexible and extensible interface for content management. It facilitates seamless communication between the front-end and the database, ensuring that users can efficiently search, filter, and match fabrics with sewing projects. Textile Guide srv also handles user management, permissions, and data validation, making the application secure and robust.",
         "technologies": ["Strapi", "Node.js", "SQLite", "JWT", "REST API"],
         "github": "https://github.com/celiamartinelli/textile-guide-srv",
-        "demo": "link-to-demo-2"
+        "demo": "link-to-demo-2",
+        "iconType": "api"
       }
     },
     {
@@ -42,7 +44,8 @@
           "WeatherApi"
         ],
         "github": "https://github.com/celiamartinelli/moon-weather",
-        "demo": "link-to-demo-3"
+        "demo": "link-to-demo-3",
+        "iconType": "mobile"
       }
     },
     {
@@ -63,7 +66,8 @@
           "MVC Architecture"
         ],
         "github": "https://github.com/celiamartinelli/colocandcoFront",
-        "demo": "link-to-demo-4"
+        "demo": "link-to-demo-4",
+        "iconType": "web"
       }
     }
   ],
