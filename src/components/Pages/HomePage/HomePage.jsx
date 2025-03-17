@@ -215,19 +215,19 @@ export default function HomePage() {
           <div id="home">
             <div className="overflow-hidden h-screen">
               <div className="text-lg mt-36 text-center my-10">
-                <h1 className="text-4xl my-4 tracking-wide">
+                <h1 className="text-4xl my-2 tracking-wide">
                   {t('home.title')}
                 </h1>
                 <h2 className="text-2xl tracking-wide">{t('home.subtitle')}</h2>
-                <div className="my-5">
+                <div className="my-2">
                   <h1 className="text-4xl">
                     {t('home.iam')} <span>{text}</span>
                     <Cursor cursorColor="green" />
                   </h1>
                 </div>
-                <p className="mt-12 w-4/6 mx-auto">{t('home.com')}</p>
-                <p className="mt-12 w-4/6 mx-auto">{t('home.com2')}</p>
-                <p className="mt-12 w-4/6 mx-auto">{t('home.goal')}</p>
+                <p className="mt-8 w-4/6 mx-auto">{t('home.com')}</p>
+                <p className="mt-8 w-4/6 mx-auto">{t('home.com2')}</p>
+                <p className="mt-8 w-4/6 mx-auto">{t('home.goal')}</p>
               </div>
               <div className="text-center p-4 ">
                 <button onClick={playSoundDownload} type="button">
