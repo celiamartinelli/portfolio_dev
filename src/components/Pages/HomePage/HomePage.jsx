@@ -214,7 +214,7 @@ export default function HomePage() {
         <DarkModeContext.Provider value={contextValue}>
           <div id="home">
             <div className="overflow-hidden ">
-              <div className="text-lg mt-36 text-center my-10">
+              <div className="text-lg mt-24 text-center my-10">
                 <div className="flex gap-4 flex-col items-center justify-center">
                   <h1 className="text-4xl my-2 tracking-wide">
                     {t('home.title')}
