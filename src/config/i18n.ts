@@ -40,8 +40,8 @@ const resources = {
     translation: {
       home: {
         title: 'Célia Martinelli',
-        subtitle:
-          '💡 Web developer with a dual mindset: 🧠 rigorous logic meets 🎨 boundless creativity.',
+        subtitle: '💡 Web developer with a dual mindset',
+        subtitle2: '🧠 rigorous logic meets 🎨 boundless creativity.',
         iam: 'I am',
         com: '🚀 Coming from a career change, I initially chose web development out of pragmatism, but I soon discovered the perfect balance between structure 🏗️ and imagination ✨. I love designing well-thought-out applications where architecture 🏛️ and user experience 🖥️ seamlessly intertwine.',
         com2: '💻 With a particular fondness for React ⚛️, I enjoy shaping how users navigate an application, structuring functionalities 🛠️, and collaborating 🤝 to bring impactful projects to life. My work on Yuli 💡 is a great example of this—just like the countless hours I spent perfecting Coloc & Co 🏡, because sometimes, coding for 36 hours straight ⏳ is just for the style. 😆',
@@ -126,8 +126,8 @@ const resources = {
     translation: {
       home: {
         title: 'Célia Martinelli',
-        subtitle:
-          '💡 Développeuse web au double visage : 🧠 logique rigoureuse et 🎨 créativité débordante.',
+        subtitle: '💡 Développeuse web au double visage',
+        subtitle2: '🧠 logique rigoureuse et 🎨 créativité débordante.',
         iam: 'Je suis',
 
         com: '🚀 Issue d’une reconversion, j’ai choisi le développement web par pragmatisme, mais j’y ai découvert un équilibre parfait entre structure 🏗️ et imagination ✨. J’aime concevoir des applications bien pensées où architecture 🏛️ et expérience utilisateur 🖥️ s’entrelacent harmonieusement.',
