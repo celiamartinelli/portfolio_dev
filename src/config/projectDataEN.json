@@ -5,7 +5,7 @@
         "id": 0,
         "title": "Pays Houdanais Cat School Association",
         "img": "/assets/project/ecoledeschats.png",
-        "gif": "/assets/project/gif/ecoledeschats.mov",
+        "gif": "/assets/project/gif/ecoledeschats.gif",
         "titleDescription": "Web application for managing animal adoptions",
         "description": "The application allows users to browse animals available for adoption, submit adoption requests, and track the status of their applications. It is built with React, Tailwind CSS, and TypeScript.",
         "technologies": ["Next.js", "Tailwind CSS", "TypeScript", "shadcn/ui"],
