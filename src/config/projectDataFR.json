@@ -3,11 +3,11 @@
     {
       "project0": {
         "id": 0,
-        "title": "Association Ecole des Chats du pays Houdanais",
+        "title": "Association École des Chats du Pays Houdanais",
         "img": "/assets/project/ecoledeschats.png",
-        "gif": "/assets/project/gif/ecoledeschats.gif",
-        "titleDescription": "Application web de gestion des adoptions d'animaux",
-        "description": "L'application permet aux utilisateurs de consulter les animaux disponibles à l'adoption, de soumettre des demandes d'adoption et de suivre l'état de leur demande. Elle est développée avec React, Tailwind CSS et TypeScript.",
+        "gif": "/assets/project/gif/ecoledeschats.mov",
+        "titleDescription": "Application web à but non lucratif pour l’adoption et la sensibilisation",
+        "description": "Cette application web à but non lucratif a été conçue pour une association œuvrant pour le bien-être animal. Elle vise à favoriser l’adoption responsable, sensibiliser le public et lutter contre la maltraitance animale. Les utilisateurs peuvent consulter les chats disponibles à l’adoption, soumettre et suivre leurs demandes, et en apprendre davantage sur la protection animale. Le projet a été développé avec Next.js, Tailwind CSS, TypeScript et shadcn/ui.",
         "technologies": ["Next.js", "Tailwind CSS", "TypeScript", "shadcn/ui"],
         "github": "https://github.com/celiamartinelli/asso-cats",
         "demo": "https://ecole-des-chats.vercel.app/",
