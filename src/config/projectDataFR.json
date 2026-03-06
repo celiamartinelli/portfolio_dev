@@ -24,7 +24,7 @@
         "description": "Textile-Guide est une application web développée avec React, utilisant Tailwind CSS pour le style et TypeScript pour une programmation robuste et typée. L'application permet aux utilisateurs de voir quels tissus correspondent à quels projets de couture (pantalon, t-shirt, sweat-shirt) et vice versa, quels projets correspondent à quels tissus.",
         "technologies": ["React", "Tailwind CSS", "TypeScript", "Expo"],
         "github": "https://github.com/celiamartinelli/Textile_Guide_React",
-        "demo": "https://textile-guide.netlify.app/",
+        "demo": "https://textile-guide.vercel.app/",
         "iconType": "web"
       }
     },
